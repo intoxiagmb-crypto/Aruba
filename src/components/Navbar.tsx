@@ -82,17 +82,17 @@ export default function Navbar({
               AH
             </div>
             <div className="flex flex-col">
-              <span className="text-white font-grotesk font-bold text-lg tracking-wider group-hover:text-gold-500 transition-colors">
+              <span className="text-white font-grotesk font-bold text-base sm:text-lg tracking-wider group-hover:text-gold-500 transition-colors">
                 ARUBA HIGH
               </span>
-              <span className="text-gold-500 font-sans text-xs font-semibold tracking-widest -mt-1 uppercase">
+              <span className="text-gold-500 font-sans text-[9px] sm:text-xs font-semibold tracking-wider sm:tracking-widest -mt-1 uppercase">
                 Maintenance Contractor
               </span>
             </div>
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden xl:flex items-center space-x-4 xl:space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -182,7 +182,7 @@ export default function Navbar({
           </nav>
 
           {/* Action Buttons: Phone, Lang Switcher, Theme Toggle, Book Appointment */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden xl:flex items-center space-x-4">
             
             {/* Direct Call Icon */}
             <a
@@ -257,7 +257,7 @@ export default function Navbar({
           </div>
 
           {/* Mobile Right Controls: Mode Toggle & Menu Toggle */}
-          <div className="flex lg:hidden items-center space-x-3">
+          <div className="flex xl:hidden items-center space-x-3">
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="text-slate-300 hover:text-gold-500 p-2"
@@ -290,7 +290,7 @@ export default function Navbar({
 
       {/* Mobile Full Screen Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-navy-950 backdrop-blur-2xl animate-fade-in p-6 overflow-y-auto flex flex-col justify-between">
+        <div className="xl:hidden fixed inset-0 z-50 bg-navy-950 backdrop-blur-2xl animate-fade-in p-6 overflow-y-auto flex flex-col justify-between">
           <div>
             {/* Overlay Header Branding */}
             <div className="flex items-center justify-between pb-6 border-b border-slate-800/40">
