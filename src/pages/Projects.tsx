@@ -176,20 +176,9 @@ export default function Projects({ lang }: ProjectsProps) {
                   {project.title}
                 </h3>
                 
-                <div className="grid grid-cols-2 gap-4 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-850/80 pt-4">
-                  <div className="flex items-center space-x-1.5">
-                    <MapPin size={14} className="text-gold-500 flex-shrink-0" />
-                    <span className="truncate">{project.location}</span>
-                  </div>
-                  <div className="flex items-center space-x-1.5 justify-end">
-                    <DollarSign size={14} className="text-gold-500 flex-shrink-0" />
-                    <span>{project.budget}</span>
-                  </div>
-                  <div className="flex items-center space-x-1.5">
-                    <Calendar size={14} className="text-gold-500 flex-shrink-0" />
-                    <span>{project.duration}</span>
-                  </div>
-                  <div className="flex items-center space-x-1 justify-end text-gold-500 font-bold">
+                <div className="flex items-center justify-between border-t border-slate-100 dark:border-slate-850/80 pt-4 text-gold-500 font-bold">
+                  <span className="text-xs text-slate-400 font-normal capitalize tracking-widest">{project.category}</span>
+                  <div className="flex items-center space-x-1">
                     {[...Array(project.rating)].map((_, i) => (
                       <Star key={i} size={11} fill="currentColor" />
                     ))}
@@ -244,26 +233,12 @@ export default function Projects({ lang }: ProjectsProps) {
                   </p>
                 </div>
 
-                <div className="space-y-3.5 pt-6 border-t border-slate-800/80 mt-6 text-xs sm:text-sm text-slate-300">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-500 flex items-center"><MapPin size={14} className="mr-1.5 text-gold-500" /> Location</span>
-                    <span className="font-bold text-white">{activeLightbox.location}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-500 flex items-center"><DollarSign size={14} className="mr-1.5 text-gold-500" /> Budget</span>
-                    <span className="font-bold text-white">{activeLightbox.budget}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-500 flex items-center"><Calendar size={14} className="mr-1.5 text-gold-500" /> Duration</span>
-                    <span className="font-bold text-white">{activeLightbox.duration}</span>
-                  </div>
-                  
-                  <div className="pt-4 flex justify-end">
-                    <div className="flex items-center space-x-1 text-gold-500">
-                      {[...Array(activeLightbox.rating)].map((_, i) => (
-                        <Star key={i} size={14} fill="currentColor" />
-                      ))}
-                    </div>
+                <div className="pt-6 border-t border-slate-800/80 mt-6 flex justify-between items-center text-xs sm:text-sm text-slate-350">
+                  <span className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Client Rating</span>
+                  <div className="flex items-center space-x-1 text-gold-500">
+                    {[...Array(activeLightbox.rating)].map((_, i) => (
+                      <Star key={i} size={14} fill="currentColor" />
+                    ))}
                   </div>
                 </div>
 
