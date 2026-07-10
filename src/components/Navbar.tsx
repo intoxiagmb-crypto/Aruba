@@ -290,78 +290,106 @@ export default function Navbar({
 
       {/* Mobile Full Screen Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] bg-navy-950/98 backdrop-blur-xl border-t border-slate-800 animate-fade-in p-6 overflow-y-auto">
-          <nav className="flex flex-col space-y-4">
-            {navItems.map((item) => (
+        <div className="lg:hidden fixed inset-0 z-50 bg-navy-950 backdrop-blur-2xl animate-fade-in p-6 overflow-y-auto flex flex-col justify-between">
+          <div>
+            {/* Overlay Header Branding */}
+            <div className="flex items-center justify-between pb-6 border-b border-slate-800/40">
+              <div className="flex items-center space-x-3">
+                <div className="w-9 h-9 bg-gradient-to-tr from-gold-500 to-orange-500 rounded-lg flex items-center justify-center text-navy-950 font-bold text-base">
+                  AH
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-white font-grotesk font-bold text-sm tracking-wider">
+                    ARUBA HIGH
+                  </span>
+                  <span className="text-gold-500 font-sans text-[9px] font-semibold tracking-widest uppercase -mt-1">
+                    Maintenance Contractor
+                  </span>
+                </div>
+              </div>
               <button
-                key={item.id}
-                onClick={() => navigateTo(item.id)}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-slate-300 hover:text-white p-2"
+              >
+                <X size={26} />
+              </button>
+            </div>
+
+            {/* Mobile Nav Links */}
+            <nav className="flex flex-col space-y-3.5 pt-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => navigateTo(item.id)}
+                  className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
+                    currentPage === item.id ? 'text-gold-500' : 'text-slate-300'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+
+              <button
+                onClick={() => navigateTo('estimator')}
                 className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
-                  currentPage === item.id ? 'text-gold-500' : 'text-slate-300'
+                  currentPage === 'estimator' ? 'text-gold-500' : 'text-slate-300'
                 }`}
               >
-                {item.label}
+                {t.navEstimator}
               </button>
-            ))}
+              
+              <button
+                onClick={() => navigateTo('tracker')}
+                className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
+                  currentPage === 'tracker' ? 'text-gold-500' : 'text-slate-300'
+                }`}
+              >
+                {t.navTracker}
+              </button>
 
-            <button
-              onClick={() => navigateTo('estimator')}
-              className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
-                currentPage === 'estimator' ? 'text-gold-500' : 'text-slate-300'
-              }`}
-            >
-              {t.navEstimator}
-            </button>
-            
-            <button
-              onClick={() => navigateTo('tracker')}
-              className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
-                currentPage === 'tracker' ? 'text-gold-500' : 'text-slate-300'
-              }`}
-            >
-              {t.navTracker}
-            </button>
+              <button
+                onClick={() => navigateTo('dashboard')}
+                className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
+                  currentPage === 'dashboard' ? 'text-gold-500' : 'text-slate-300'
+                }`}
+              >
+                {t.navDashboard}
+              </button>
 
-            <button
-              onClick={() => navigateTo('dashboard')}
-              className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
-                currentPage === 'dashboard' ? 'text-gold-500' : 'text-slate-300'
-              }`}
-            >
-              {t.navDashboard}
-            </button>
+              <button
+                onClick={() => navigateTo('careers')}
+                className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
+                  currentPage === 'careers' ? 'text-gold-500' : 'text-slate-300'
+                }`}
+              >
+                {t.navCareers}
+              </button>
 
-            <button
-              onClick={() => navigateTo('careers')}
-              className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
-                currentPage === 'careers' ? 'text-gold-500' : 'text-slate-300'
-              }`}
-            >
-              {t.navCareers}
-            </button>
+              <button
+                onClick={() => navigateTo('faq')}
+                className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
+                  currentPage === 'faq' ? 'text-gold-500' : 'text-slate-300'
+                }`}
+              >
+                {t.navFAQ}
+              </button>
 
-            <button
-              onClick={() => navigateTo('faq')}
-              className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
-                currentPage === 'faq' ? 'text-gold-500' : 'text-slate-300'
-              }`}
-            >
-              {t.navFAQ}
-            </button>
+              <button
+                onClick={() => navigateTo('contact')}
+                className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
+                  currentPage === 'contact' ? 'text-gold-500' : 'text-slate-300'
+                }`}
+              >
+                {t.navContact}
+              </button>
+            </nav>
+          </div>
 
-            <button
-              onClick={() => navigateTo('contact')}
-              className={`text-left text-lg font-bold tracking-wide uppercase py-2 border-b border-slate-800/40 ${
-                currentPage === 'contact' ? 'text-gold-500' : 'text-slate-300'
-              }`}
-            >
-              {t.navContact}
-            </button>
-
-            <div className="pt-4 flex flex-col space-y-4">
+          <div className="pt-8">
+            <div className="flex flex-col space-y-4">
               <a
                 href="tel:+2976602356"
-                className="bg-slate-800 text-white font-bold py-3.5 rounded-lg flex items-center justify-center space-x-2 text-sm uppercase tracking-wider"
+                className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-lg flex items-center justify-center space-x-2 text-sm uppercase tracking-wider transition-colors"
               >
                 <Phone size={16} className="text-gold-500" />
                 <span>Call +297-660-2356</span>
@@ -369,18 +397,18 @@ export default function Navbar({
 
               <button
                 onClick={() => navigateTo('appointment')}
-                className="bg-gradient-to-r from-gold-500 to-orange-500 text-navy-950 font-bold py-3.5 rounded-lg flex items-center justify-center space-x-2 text-sm uppercase tracking-wider"
+                className="bg-gradient-to-r from-gold-500 to-orange-500 hover:from-gold-600 hover:to-orange-600 text-navy-950 font-bold py-3.5 rounded-lg flex items-center justify-center space-x-2 text-sm uppercase tracking-wider transition-all"
               >
                 <Calendar size={16} />
                 <span>{t.btnBook}</span>
               </button>
             </div>
 
-            <div className="pt-8 text-center">
-              <p className="text-slate-500 text-xs uppercase tracking-widest">{t.workingHours}</p>
-              <p className="text-slate-400 text-sm font-semibold mt-1">Monday - Friday: 7:00 AM – 5:00 PM</p>
+            <div className="pt-6 text-center">
+              <p className="text-slate-500 text-[10px] uppercase tracking-widest">{t.workingHours}</p>
+              <p className="text-slate-400 text-xs font-semibold mt-1">Monday - Friday: 7:00 AM – 5:00 PM</p>
             </div>
-          </nav>
+          </div>
         </div>
       )}
     </header>

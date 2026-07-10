@@ -203,7 +203,7 @@ export default function Projects({ lang }: ProjectsProps) {
               </button>
 
               {/* Left Column: Image(s) */}
-              <div className="md:w-3/5 bg-slate-950 flex flex-col justify-center relative min-h-[250px] sm:min-h-[350px]">
+              <div className="w-full md:w-3/5 bg-slate-950 relative h-48 sm:h-64 md:h-auto flex flex-col justify-center">
                 <img 
                   src={activeLightbox.image} 
                   alt={activeLightbox.title} 
