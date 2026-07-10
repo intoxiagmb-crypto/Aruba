@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Custom premium scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-navy-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-500 rounded-full;
+  border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-orange-500;
+}
+
+/* Custom layout classes */
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5edd1 0%, #d4af37 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-navy-gradient {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid-bg-dark {
+  background-image: linear-gradient(rgba(212, 175, 55, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(212, 175, 55, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.grid-bg-light {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+.glow-gold-hover:hover {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
