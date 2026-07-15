@@ -161,7 +161,7 @@ export default function Services({ lang, setSelectedService, setCurrentPage }: S
               {lang === 'pap' ? 'Kalkula e kosto aproksima di bo proyecto' : lang === 'nl' ? 'Bereken direct uw verwachte projectkosten' : 'Want a Fast Estimate Before Booking?'}
             </h4>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xl mx-auto">
-              Our automated cost calculator processes your square footage, choice of materials, and building characteristics to give you a dynamic, transparent price range instantly.
+              Our automated cost calculator processes your construction area in square meters, quality levels, and optional services to give you a dynamic, transparent price estimate instantly.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <button

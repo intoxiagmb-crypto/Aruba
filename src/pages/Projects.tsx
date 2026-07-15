@@ -90,7 +90,7 @@ export default function Projects({ lang }: ProjectsProps) {
       duration: '60 Days',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80',
-      description: 'Constructing a 1,200 sq. ft. guest house extension with load-bearing columns, concrete block masonry, roof framing, and full plumbing/electrical wiring.'
+      description: 'Constructing a 110 m² guest house extension with load-bearing columns, concrete block masonry, roof framing, and full plumbing/electrical wiring.'
     }
   ];
 

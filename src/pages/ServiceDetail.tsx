@@ -46,7 +46,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
         'Benjamin Moore Aura Waterborne Exterior',
         'Premium elastomeric masonry patches'
       ],
-      pricing: 'Estimated: $3.50 – $6.20 per sq. ft. depending on surface prep and paint brand selection.',
+      pricing: 'Estimated: $38 – $67 per m² depending on surface prep and paint brand selection.',
       faqs: [
         { q: 'How often should a house in Aruba be repainted?', a: 'Due to the high salt concentration in coastal areas like Palm Beach or Noord, exterior walls should be repainted every 5 to 7 years with premium elastomeric coatings to prevent concrete carbonation.' },
         { q: 'Do you offer color consultations?', a: 'Yes! We supply detailed color books and apply test patches to your walls under local solar light to help you choose the best hues.' }
@@ -158,7 +158,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
         'Glass-fiber reinforcing additives',
         'Sealer resins protecting against water ingress'
       ],
-      pricing: 'Standard Driveways: $8.50 – $14 per sq. ft. Stamped concrete: $12.50 – $22 per sq. ft.',
+      pricing: 'Standard Driveways: $91 – $151 per m². Stamped concrete: $135 – $237 per m².',
       faqs: [
         { q: 'How long does concrete take to cure?', a: 'While concrete dries to the touch in 24-48 hours, it takes 28 days to reach full structural design strength. Vehicles should not drive on driveways for at least 7 days.' },
         { q: 'Why does concrete crack in Aruba, and how do you prevent it?', a: 'Rapid moisture loss due to trade winds causes cracking. We prevent this by cutting expansion joints at precise intervals and applying curing compounds.' }
