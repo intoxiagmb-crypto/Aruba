@@ -104,7 +104,7 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
       title: lang === 'pap' ? 'Landscaping & Piscina' : lang === 'nl' ? 'Tuinarchitectuur & Zwembaden' : 'Landscaping & Pool Areas',
       desc: lang === 'pap' ? 'Diseño di hardin, sistema di muha y area di pool.' : lang === 'nl' ? 'Modern tuinontwerp, automatische irrigatie en luxe zwembadomgevingen.' : 'Complete garden architecture, automated irrigation, and resort-style pool decks.',
       icon: '🌴',
-      bg: 'https://images.unsplash.com/photo-1558904541-efa8c1a68f6f?auto=format&fit=crop&w=600&q=80'
+      bg: '/aruba_photos/optimized/dsc09778.jpg'
     },
     {
       id: 'celltower',

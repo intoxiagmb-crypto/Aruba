@@ -195,7 +195,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
     landscaping: {
       title: lang === 'pap' ? 'Diseño di Hardin' : lang === 'nl' ? 'Tuinaanleg & Irrigatie' : 'Landscaping & Pool Decks',
       tagline: 'Lush tropical oasis design, smart water lines, and poolside spaces.',
-      bgImage: 'https://images.unsplash.com/photo-1558904541-efa8c1a68f6f?auto=format&fit=crop&w=1200&q=80',
+      bgImage: '/aruba_photos/optimized/dsc09778.jpg',
       description: 'Create a paradise in your backyard. We design water-efficient tropical landscapes using native palms, bougainvillea, and cacti that thrive in Aruba. We lay out automated drip irrigation lines, build stamped concrete pool decks, install artificial or natural turf, and install modern outdoor LED lighting.',
       details: [
         'Tropical landscape design and planting arrangements',

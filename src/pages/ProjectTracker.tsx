@@ -114,7 +114,7 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
           date: 'June 05, 2026',
           status: 'done',
           notes: 'Irrigation timers programmed for early morning/late evening cycles. Custom turf grass curbed correctly. Client approved and handed over.',
-          image: 'https://images.unsplash.com/photo-1558904541-efa8c1a68f6f?auto=format&fit=crop&w=400&q=80'
+          image: '/aruba_photos/optimized/dsc09778.jpg'
         },
         {
           title: 'Palm Trees Planting & Topsoil Layout',

@@ -41,7 +41,7 @@ export default function Blog({ lang }: BlogProps) {
       id: 4,
       title: 'Irrigation Secrets: Saving 40% on Water Bills',
       desc: 'Web Aruba water is valuable. Using automated drip lines, smart soil hygrometers, and organic mulch keeps your gardens lush without wasting money.',
-      image: 'https://images.unsplash.com/photo-1558904541-efa8c1a68f6f?auto=format&fit=crop&w=600&q=80',
+      image: '/aruba_photos/optimized/dsc09778.jpg',
       category: 'Landscaping',
       date: 'May 25, 2026',
       readTime: '4 Min Read'

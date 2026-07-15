@@ -106,7 +106,7 @@ export default function About({ lang, setCurrentPage }: AboutProps) {
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60 mt-6"
             />
             <img 
-              src="https://images.unsplash.com/photo-1558904541-efa8c1a68f6f?auto=format&fit=crop&w=400&h=300&q=80" 
+              src="/aruba_photos/optimized/dsc09778.jpg" 
               alt="Luxury garden landscaping" 
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60 -mt-6"
             />
