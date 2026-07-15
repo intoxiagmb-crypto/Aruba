@@ -33,8 +33,8 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$18,500',
       duration: '14 Days',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
-      beforeImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
+      image: '/aruba_photos/optimized/2024-07-11_20-10-42_-_create_an_image_of_a_modern__luxurious_house_with_a_minimalist_design__the_facade_should_feature_cle.jpeg',
+      beforeImage: '/aruba_photos/optimized/img_1316.jpg',
       description: 'Full stripping, sanding, and elastomeric weatherproofing application on a multi-level luxury estate. Included anti-salinity protective topcoats to resist sea spray.'
     },
     {
@@ -45,7 +45,8 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$34,000',
       duration: '18 Days',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1558904541-efa8c1a68f6f?auto=format&fit=crop&w=800&q=80',
+      image: '/aruba_photos/optimized/dsc09751.jpg',
+      beforeImage: '/aruba_photos/optimized/img_1228.jpg',
       description: 'Structural concrete pouring followed by custom slate-pattern stamp texturing, UV stable color hardener application, and chemical sealing for pool-side grip.'
     },
     {
@@ -56,7 +57,8 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$45,000',
       duration: '25 Days',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1558904541-efa8c1a68f6f?auto=format&fit=crop&w=800&q=80',
+      image: '/aruba_photos/optimized/dsc09778.jpg',
+      beforeImage: '/aruba_photos/optimized/img_1335.jpg',
       description: 'Total design and planting of drought-resistant palm layouts, volcanic rocks, automated smart drip irrigation, and low-voltage landscape lighting.'
     },
     {
@@ -67,7 +69,8 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$12,800',
       duration: '5 Days',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+      image: '/aruba_photos/optimized/img_1232.jpg',
+      beforeImage: '/aruba_photos/optimized/img_1310.jpg',
       description: 'Removal of corroded switchboards, upgrading the main distribution frame, implementing automatic generator bypass, and certifying safety grounds.'
     },
     {
@@ -78,7 +81,8 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$55,000',
       duration: '30 Days',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80',
+      image: '/aruba_photos/optimized/dsc09684.jpg',
+      beforeImage: '/aruba_photos/optimized/image_5__upscale_1.png',
       description: 'High-altitude inspection, rust treatment with industrial steel primers, microwave alignment, and application of marine-grade safety aviation paint.'
     },
     {
@@ -89,7 +93,8 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$120,000',
       duration: '60 Days',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80',
+      image: '/aruba_photos/optimized/img_1306.jpg',
+      beforeImage: '/aruba_photos/optimized/2024-07-07_12-03-23_-_elegant_living_room__beautiful_white_walls___pale_colors__.jpeg',
       description: 'Constructing a 110 m² guest house extension with load-bearing columns, concrete block masonry, roof framing, and full plumbing/electrical wiring.'
     }
   ];
