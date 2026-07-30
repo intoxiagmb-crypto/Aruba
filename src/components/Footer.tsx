@@ -157,8 +157,8 @@ export default function Footer({ setCurrentPage, setSelectedService, lang }: Foo
               <div className="flex items-start space-x-3">
                 <MapPin className="text-gold-500 mt-0.5 flex-shrink-0" size={16} />
                 <span className="text-slate-400 leading-relaxed">
-                  Caya Velp 6<br />
-                  San Nicolaas, Aruba
+                  Italiestraat 38 unit 5B<br />
+                  Aruba
                 </span>
               </div>
               <div className="flex flex-col space-y-2 pt-1">

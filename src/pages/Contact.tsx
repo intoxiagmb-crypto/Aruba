@@ -59,8 +59,8 @@ export default function Contact({ lang }: ContactProps) {
               <div className="space-y-1 text-xs sm:text-sm">
                 <h4 className="font-bold text-navy-900 dark:text-white uppercase tracking-wider text-xs">Office Address</h4>
                 <p className="text-slate-500 dark:text-slate-400">
-                  Caya Velp 6<br />
-                  San Nicolaas, Aruba
+                  Italiestraat 38 unit 5B<br />
+                  Aruba
                 </p>
               </div>
             </div>
@@ -220,13 +220,13 @@ export default function Contact({ lang }: ContactProps) {
         <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl text-center select-none relative max-w-4xl mx-auto overflow-hidden">
           <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
           <h4 className="text-white font-bold text-lg relative z-10 font-grotesk">Our Physical Location</h4>
-          <p className="text-gold-500 font-semibold text-xs tracking-wider uppercase mt-1 relative z-10">Caya Velp 6, San Nicolaas, Aruba</p>
+          <p className="text-gold-500 font-semibold text-xs tracking-wider uppercase mt-1 relative z-10">Italiestraat 38 unit 5B, Aruba</p>
           <p className="text-slate-400 text-xs mt-3 relative z-10 leading-relaxed max-w-lg mx-auto">
-            You can drop by our administrative depot. Located in San Nicolaas, we coordinate fast dispatch trucks to any neighborhood in Aruba.
+            You can drop by our administrative depot. Located at Italiestraat 38 unit 5B, we coordinate fast dispatch trucks to any neighborhood in Aruba.
           </p>
           <div className="pt-6 relative z-10 flex justify-center">
             <a
-              href="https://maps.google.com/?q=Caya+Velp+6,+San+Nicolaas,+Aruba"
+              href="https://maps.google.com/?q=Italiestraat+38+unit+5B,+Aruba"
               target="_blank"
               rel="noreferrer"
               className="bg-slate-800 hover:bg-slate-700 text-white font-bold px-6 py-3 rounded-lg text-xs uppercase tracking-wider flex items-center space-x-1.5 transition-colors border border-slate-700"

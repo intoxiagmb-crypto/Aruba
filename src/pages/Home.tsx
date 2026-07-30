@@ -657,14 +657,14 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
 
                 <div className="max-w-md relative z-10">
                   <h5 className="text-white font-bold text-lg">ARUBA HIGH MAINTENANCE CONTRACTOR</h5>
-                  <p className="text-gold-500 font-semibold text-xs tracking-wider uppercase mt-1">Caya Velp 6, San Nicolaas, Aruba</p>
+                  <p className="text-gold-500 font-semibold text-xs tracking-wider uppercase mt-1">Italiestraat 38 unit 5B, Aruba</p>
                   <p className="text-slate-400 text-xs leading-relaxed mt-3">
-                    Our administrative office and equipment depot is centrally situated in San Nicolaas, serving projects all across Aruba, from Noord and Eagle Beach to Baby Beach.
+                    Our administrative office and equipment depot is centrally situated at Italiestraat 38 unit 5B, serving projects all across Aruba, from Noord and Eagle Beach to Baby Beach.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 mt-6">
                     <a
-                      href="https://maps.google.com/?q=Caya+Velp+6,+San+Nicolaas,+Aruba"
+                      href="https://maps.google.com/?q=Italiestraat+38+unit+5B,+Aruba"
                       target="_blank"
                       rel="noreferrer"
                       className="bg-slate-800 hover:bg-slate-700 text-white font-bold px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider flex items-center space-x-1.5 transition-colors border border-slate-700"

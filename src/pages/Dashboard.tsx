@@ -248,7 +248,7 @@ export default function Dashboard({ lang }: DashboardProps) {
                 <div className="grid grid-cols-2 gap-6 text-xs text-slate-600 border-b border-slate-100 pb-6">
                   <div className="space-y-1">
                     <p className="font-bold text-[10px] uppercase text-slate-400">Aruba High Maintenance Contractor</p>
-                    <p className="font-bold text-navy-900">Caya Velp 6, San Nicolaas, Aruba</p>
+                    <p className="font-bold text-navy-900">Italiestraat 38 unit 5B, Aruba</p>
                     <p>+297-660-2356</p>
                     <p>administrator@arubahighmaintenance.com</p>
                   </div>
@@ -304,7 +304,7 @@ export default function Dashboard({ lang }: DashboardProps) {
 
               {/* Print Footer */}
               <div className="border-t border-slate-100 pt-6 text-[10px] text-center text-slate-400 print:block">
-                Thank you for your business. Aruba High Maintenance Contractor, Caya Velp 6, San Nicolaas.
+                Thank you for your business. Aruba High Maintenance Contractor, Italiestraat 38 unit 5B, Aruba.
               </div>
 
             </div>

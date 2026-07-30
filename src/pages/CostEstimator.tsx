@@ -338,7 +338,7 @@ export default function CostEstimator({ lang, setCurrentPage }: CostEstimatorPro
           <div class="header">
             <div>
               <div class="logo">ARUBA HIGH MAINTENANCE</div>
-              <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Caya Velp 6, San Nicolaas, Aruba</div>
+              <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Italiestraat 38 unit 5B, Aruba</div>
             </div>
             <div class="title">Cost Estimate</div>
           </div>

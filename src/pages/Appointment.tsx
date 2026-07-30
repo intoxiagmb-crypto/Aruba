@@ -293,7 +293,7 @@ export default function Appointment({ lang }: AppointmentProps) {
                     </label>
                     <input
                       type="text"
-                      placeholder="e.g. Caya Velp 6, San Nicolaas"
+                      placeholder="e.g. Italiestraat 38 unit 5B"
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
                       required
