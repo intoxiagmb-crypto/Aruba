@@ -175,7 +175,7 @@ export default function Careers({ lang }: CareersProps) {
                   required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="e.g. +297-660-2356"
+                  placeholder="e.g. +297 730 8583"
                   className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-slate-800 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-gold-500"
                 />
               </div>

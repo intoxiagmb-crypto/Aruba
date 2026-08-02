@@ -111,7 +111,7 @@ export default function Dashboard({ lang }: DashboardProps) {
                 </div>
                 <div className="flex justify-between">
                   <span>Registered Mobile</span>
-                  <span className="font-bold text-navy-900 dark:text-white">+297-660-9817</span>
+                  <span className="font-bold text-navy-900 dark:text-white">+297 730 8583</span>
                 </div>
               </div>
             </div>
@@ -228,9 +228,11 @@ export default function Dashboard({ lang }: DashboardProps) {
                 {/* Header branding */}
                 <div className="flex items-center justify-between border-b border-slate-100 pb-6">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-navy-900 rounded-lg flex items-center justify-center text-gold-500 font-bold text-lg">
-                      AH
-                    </div>
+                    <img 
+                      src="/logo.svg" 
+                      alt="Aruba High Maintenance Logo" 
+                      className="h-12 w-auto object-contain" 
+                    />
                     <div>
                       <h4 className="font-extrabold text-base text-navy-900 tracking-wider">ARUBA HIGH MAINTENANCE</h4>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-0.5">Contractor Services</p>
@@ -249,8 +251,8 @@ export default function Dashboard({ lang }: DashboardProps) {
                   <div className="space-y-1">
                     <p className="font-bold text-[10px] uppercase text-slate-400">Aruba High Maintenance Contractor</p>
                     <p className="font-bold text-navy-900">Italiestraat 38 unit 5B, Aruba</p>
-                    <p>+297-660-2356</p>
-                    <p>administrator@arubahighmaintenance.com</p>
+                    <p>+297 730 8583</p>
+                    <p>m.petronilia@arubahighmaintenance.com</p>
                   </div>
                   <div className="space-y-1 text-right">
                     <p className="font-bold text-[10px] uppercase text-slate-400">Billed To</p>

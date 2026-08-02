@@ -21,7 +21,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [lang, setLang] = useState<Language>('en');
-  const [darkMode, setDarkMode] = useState<boolean>(true); // Default to dark for a premium, luxury feel
+  const [darkMode, setDarkMode] = useState<boolean>(false); // Default to clean, bright Light Mode
   const [loading, setLoading] = useState<boolean>(true);
 
   // Sync dark class on html tag
@@ -37,7 +37,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1200);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -86,16 +86,18 @@ function App() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-navy-950 flex flex-col items-center justify-center z-50">
+      <div className="fixed inset-0 bg-slate-50 dark:bg-navy-950 flex flex-col items-center justify-center z-50 transition-colors duration-300">
         {/* Animated premium logo loader */}
         <div className="relative mb-6">
-          <div className="w-16 h-16 bg-gradient-to-tr from-gold-500 to-orange-500 rounded-2xl flex items-center justify-center text-navy-950 font-black text-2xl shadow-xl animate-pulse-subtle">
-            AH
-          </div>
-          <div className="absolute -inset-3 border border-gold-500/25 rounded-3xl animate-spin" style={{ animationDuration: '6s' }} />
+          <img 
+            src="/logo.svg" 
+            alt="Aruba High Maintenance Logo" 
+            className="h-20 sm:h-24 w-auto object-contain animate-pulse-subtle filter drop-shadow-xl" 
+          />
+          <div className="absolute -inset-4 border-2 border-gold-500/40 rounded-3xl animate-spin" style={{ animationDuration: '5s' }} />
         </div>
-        <h4 className="text-white font-grotesk font-black text-lg tracking-wider">ARUBA HIGH MAINTENANCE</h4>
-        <span className="text-gold-500 text-[10px] font-bold uppercase tracking-widest mt-1.5 animate-pulse">
+        <h4 className="text-navy-900 dark:text-white font-grotesk font-black text-lg tracking-wider mt-2">ARUBA HIGH MAINTENANCE</h4>
+        <span className="text-gold-600 dark:text-gold-500 text-[10px] font-bold uppercase tracking-widest mt-1.5 animate-pulse">
           Loading Premium Experience...
         </span>
       </div>

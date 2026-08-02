@@ -38,11 +38,11 @@ export default function Contact({ lang }: ContactProps) {
         
         {/* Header Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
-          <h1 className="text-xs uppercase tracking-widest text-gold-500 font-bold mb-3">Contact Us</h1>
+          <h1 className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-400 font-extrabold mb-3">Contact Us</h1>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-navy-900 dark:text-white tracking-tight font-grotesk">
             Let's Discuss Your Project
           </h2>
-          <div className="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-4 rounded-full" />
         </div>
 
         {/* Layout coordinates cards & form */}
@@ -53,12 +53,12 @@ export default function Contact({ lang }: ContactProps) {
             
             {/* Address */}
             <div className="bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
-              <div className="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center text-gold-500 border border-gold-500/20 flex-shrink-0">
+              <div className="w-10 h-10 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-xl flex items-center justify-center border border-gold-500/20 flex-shrink-0">
                 <MapPin size={20} />
               </div>
               <div className="space-y-1 text-xs sm:text-sm">
                 <h4 className="font-bold text-navy-900 dark:text-white uppercase tracking-wider text-xs">Office Address</h4>
-                <p className="text-slate-500 dark:text-slate-400">
+                <p className="text-slate-600 dark:text-slate-400">
                   Italiestraat 38 unit 5B<br />
                   Aruba
                 </p>
@@ -67,16 +67,16 @@ export default function Contact({ lang }: ContactProps) {
 
             {/* Phones */}
             <div className="bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
-              <div className="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center text-gold-500 border border-gold-500/20 flex-shrink-0">
+              <div className="w-10 h-10 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-xl flex items-center justify-center border border-gold-500/20 flex-shrink-0">
                 <Phone size={20} />
               </div>
               <div className="space-y-1 text-xs sm:text-sm">
                 <h4 className="font-bold text-navy-900 dark:text-white uppercase tracking-wider text-xs">Phone Call Coordinates</h4>
                 <div className="flex flex-col space-y-1">
-                  <a href="tel:+2976602356" className="text-slate-500 dark:text-slate-400 hover:text-gold-500 font-semibold font-mono">
-                    +297-660-2356
+                  <a href="tel:+2977308583" className="text-slate-600 dark:text-slate-400 hover:text-gold-600 dark:hover:text-gold-400 font-semibold font-mono">
+                    +297 730 8583
                   </a>
-                  <a href="tel:+2976629817" className="text-slate-500 dark:text-slate-400 hover:text-gold-500 font-semibold font-mono">
+                  <a href="tel:+2976629817" className="text-slate-600 dark:text-slate-400 hover:text-gold-600 dark:hover:text-gold-400 font-semibold font-mono">
                     +297-662-9817
                   </a>
                 </div>
@@ -85,17 +85,14 @@ export default function Contact({ lang }: ContactProps) {
 
             {/* Email */}
             <div className="bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl shadow-sm flex items-start space-x-4">
-              <div className="w-10 h-10 bg-gold-500/10 rounded-xl flex items-center justify-center text-gold-500 border border-gold-500/20 flex-shrink-0">
+              <div className="w-10 h-10 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-xl flex items-center justify-center border border-gold-500/20 flex-shrink-0">
                 <Mail size={20} />
               </div>
               <div className="space-y-1 text-xs sm:text-sm break-all">
                 <h4 className="font-bold text-navy-900 dark:text-white uppercase tracking-wider text-xs">Email Correspondence</h4>
-                <div className="flex flex-col space-y-1">
-                  <a href="mailto:administrator@arubahighmaintenance.com" className="text-slate-500 dark:text-slate-400 hover:text-gold-500">
-                    administrator@arubahighmaintenance.com
-                  </a>
-                  <a href="mailto:R.petronilia@arubahighmaintenance.com" className="text-slate-500 dark:text-slate-400 hover:text-gold-500">
-                    R.petronilia@arubahighmaintenance.com
+                <div className="flex flex-col space-y-1.5">
+                  <a href="mailto:m.petronilia@arubahighmaintenance.com" className="text-amber-600 dark:text-gold-400 hover:underline font-bold">
+                    m.petronilia@arubahighmaintenance.com
                   </a>
                 </div>
               </div>
@@ -164,7 +161,7 @@ export default function Contact({ lang }: ContactProps) {
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder="e.g. +297-660-2356"
+                    placeholder="e.g. +297 730 8583"
                     className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-slate-800 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-gold-500"
                   />
                 </div>

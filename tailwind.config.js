@@ -21,18 +21,31 @@ export default {
           900: '#0f172a', // Deep Navy base
           950: '#020617', // Darker navy background
         },
+        crimson: {
+          50: '#fff1f1',
+          100: '#ffe1e1',
+          200: '#ffc7c7',
+          300: '#ffa0a0',
+          400: '#f66b6b',
+          500: '#e13838', // Bright Brand Red
+          600: '#b52222', // Aruba Red logo accent
+          700: '#901c1d', // Deep Aruba Crimson (Logo Primary)
+          800: '#7a191a',
+          900: '#641718',
+          950: '#38090a',
+        },
         gold: {
-          50: '#fbf8eb',
-          100: '#f5edd1',
-          200: '#ebdaa2',
-          300: '#dec26e',
-          400: '#d0a640',
-          500: '#d4af37', // Construction Gold base
-          600: '#ab811a',
-          700: '#865f17',
-          800: '#6e4c17',
-          900: '#5c3e17',
-          950: '#352109',
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#eab308', // Primary Construction Yellow / Gold
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+          950: '#451a03',
         },
       },
       fontFamily: {

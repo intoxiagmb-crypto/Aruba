@@ -35,17 +35,11 @@ export default function Footer({ setCurrentPage, setSelectedService, lang }: Foo
           {/* Column 1: Brand & About */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigateTo('home')}>
-              <div className="w-10 h-10 bg-gradient-to-tr from-gold-500 to-orange-500 rounded-lg flex items-center justify-center text-navy-950 font-bold text-lg shadow-md">
-                AH
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-grotesk font-bold text-lg tracking-wider">
-                  ARUBA HIGH
-                </span>
-                <span className="text-gold-500 font-sans text-xs font-semibold tracking-widest -mt-1 uppercase">
-                  Maintenance Contractor
-                </span>
-              </div>
+              <img 
+                src="/logo.svg" 
+                alt="Aruba High Maintenance Logo" 
+                className="h-14 sm:h-16 w-auto object-contain filter drop-shadow-lg" 
+              />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed pt-2">
               {t.footerAbout}
@@ -164,8 +158,8 @@ export default function Footer({ setCurrentPage, setSelectedService, lang }: Foo
               <div className="flex flex-col space-y-2 pt-1">
                 <div className="flex items-center space-x-3">
                   <Phone className="text-gold-500 flex-shrink-0" size={16} />
-                  <a href="tel:+2976602356" className="text-slate-400 hover:text-white transition-colors">
-                    +297-660-2356
+                  <a href="tel:+2977308583" className="text-slate-400 hover:text-white transition-colors">
+                    +297 730 8583
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -178,14 +172,8 @@ export default function Footer({ setCurrentPage, setSelectedService, lang }: Foo
               <div className="flex flex-col space-y-2 pt-1 break-all">
                 <div className="flex items-center space-x-3">
                   <Mail className="text-gold-500 flex-shrink-0" size={16} />
-                  <a href="mailto:administrator@arubahighmaintenance.com" className="text-xs text-slate-400 hover:text-white transition-colors">
-                    administrator@arubahighmaintenance.com
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="text-gold-500 flex-shrink-0" size={16} />
-                  <a href="mailto:R.petronilia@arubahighmaintenance.com" className="text-xs text-slate-400 hover:text-white transition-colors">
-                    R.petronilia@arubahighmaintenance.com
+                  <a href="mailto:m.petronilia@arubahighmaintenance.com" className="text-xs text-gold-400 hover:text-gold-300 font-bold transition-colors">
+                    m.petronilia@arubahighmaintenance.com
                   </a>
                 </div>
               </div>
@@ -221,7 +209,7 @@ export default function Footer({ setCurrentPage, setSelectedService, lang }: Foo
 
       {/* Floating WhatsApp Action Button */}
       <a
-        href="https://wa.me/2976602356"
+        href="https://wa.me/2977308583"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 left-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 animate-pulse-subtle"

@@ -263,7 +263,7 @@ export default function Appointment({ lang }: AppointmentProps) {
                     </label>
                     <input
                       type="tel"
-                      placeholder="e.g. +297-660-2356"
+                      placeholder="e.g. +297 730 8583"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required

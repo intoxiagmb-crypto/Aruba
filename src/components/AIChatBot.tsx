@@ -74,7 +74,7 @@ export default function AIChatBot({ lang, setCurrentPage, setSelectedService }: 
         } else if (prompt.includes('preise') || prompt.includes('prijs') || prompt.includes('kosto') || prompt.includes('quote') || prompt.includes('cost')) {
           reply = "Pa kosto exacto, bishita nos Kalkuladó di Kosto (Cost Estimator) den e menu general. Eynan bo por kalkula un estimacion.";
         } else {
-          reply = "Masha danki pa bo pregunta. Aruba High Maintenance Contractor ta localisa na Italiestraat 38 unit 5B, Aruba. Bo por yama nos na +297-660-2356.";
+          reply = "Masha danki pa bo pregunta. Aruba High Maintenance Contractor ta localisa na Italiestraat 38 unit 5B, Aruba. Bo por yama nos na +297 730 8583.";
         }
       } else if (lang === 'nl') {
         if (prompt.includes('schilder') || prompt.includes('verf') || prompt.includes('verven')) {
@@ -88,7 +88,7 @@ export default function AIChatBot({ lang, setCurrentPage, setSelectedService }: 
         } else if (prompt.includes('kosten') || prompt.includes('prijs') || prompt.includes('offerte')) {
           reply = "Voor een snelle prijsindicatie kunt u onze ingebouwde Kosten Calculator gebruiken in het menu. Voor een gedetailleerde offerte kunt u een afspraak boeken.";
         } else {
-          reply = "Bedankt voor uw bericht. Aruba High Maintenance Contractor is gevestigd aan de Italiestraat 38 unit 5B, Aruba. Bel ons direct op +297-660-2356 voor meer info.";
+          reply = "Bedankt voor uw bericht. Aruba High Maintenance Contractor is gevestigd aan de Italiestraat 38 unit 5B, Aruba. Bel ons direct op +297 730 8583 voor meer info.";
         }
       } else {
         // English defaults
@@ -105,7 +105,7 @@ export default function AIChatBot({ lang, setCurrentPage, setSelectedService }: 
         } else if (prompt.includes('tracker') || prompt.includes('status') || prompt.includes('progress')) {
           reply = "If you are an active client, you can enter your project code in our 'Project Tracker' page to see active completion updates and photos.";
         } else {
-          reply = "Thank you for contacting Aruba High Maintenance! We operate Monday to Friday, 7am - 5pm. You can reach us directly at +297-660-2356 or visit us at Italiestraat 38 unit 5B, Aruba.";
+          reply = "Thank you for contacting Aruba High Maintenance! We operate Monday to Friday, 7am - 5pm. You can reach us directly at +297 730 8583 or visit us at Italiestraat 38 unit 5B, Aruba.";
         }
       }
 

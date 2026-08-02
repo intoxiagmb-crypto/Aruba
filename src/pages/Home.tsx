@@ -612,15 +612,15 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
               <div className="space-y-4 pt-4 relative z-10">
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Phone size={18} className="text-gold-500" />
-                  <div className="text-sm">
-                    <a href="tel:+2976602356" className="font-bold hover:text-gold-500 transition-colors">+297-660-2356</a>
-                    <span className="mx-2 text-slate-600">/</span>
+                  <div className="text-sm flex flex-wrap items-center gap-1.5">
+                    <a href="tel:+2977308583" className="font-bold hover:text-gold-500 transition-colors">+297 730 8583</a>
+                    <span className="text-slate-600">/</span>
                     <a href="tel:+2976629817" className="font-bold hover:text-gold-500 transition-colors">+297-662-9817</a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Phone className="text-emerald-400" size={18} />
-                  <a href="https://wa.me/2976602356" className="text-sm font-bold text-emerald-400 hover:underline">
+                  <a href="https://wa.me/2977308583" target="_blank" rel="noreferrer" className="text-sm font-bold text-emerald-400 hover:underline">
                     WhatsApp Chat Support
                   </a>
                 </div>
