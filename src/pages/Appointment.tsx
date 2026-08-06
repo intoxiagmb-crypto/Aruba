@@ -392,7 +392,7 @@ export default function Appointment({ lang }: AppointmentProps) {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">Representative Dispatch</span>
-                    <span className="font-bold text-navy-900 dark:text-white">R. Petronilia / Site Inspector</span>
+                    <span className="font-bold text-navy-900 dark:text-white">Coe M. Petronilia / Site Inspector</span>
                   </div>
                 </div>
 

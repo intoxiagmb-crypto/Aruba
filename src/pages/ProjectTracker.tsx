@@ -37,7 +37,7 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
       code: 'ARUBA-2026-001',
       name: 'Luxury Villa Painting & Weatherproofing',
       location: 'Noord, Aruba (Palm Beach District)',
-      manager: 'R. Petronilia / Site Supervisor',
+      manager: 'Coe M. Petronilia / Site Supervisor',
       completion: 85,
       startDate: 'June 10, 2026',
       estFinishDate: 'July 15, 2026',
@@ -127,6 +127,43 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
           date: 'May 15, 2026',
           status: 'done',
           notes: 'Connected main pipe feeds. Calibrated water pressure valves.'
+        }
+      ]
+    },
+    'ARUBA-2026-004': {
+      code: 'ARUBA-2026-004',
+      name: 'DOW Telecom Cell Tower Repainting & Rigging',
+      location: 'San Nicolaas, Aruba',
+      manager: 'Coe M. Petronilia / High-Altitude Rigging Lead',
+      completion: 70,
+      startDate: 'July 01, 2026',
+      estFinishDate: 'August 15, 2026',
+      logs: [
+        {
+          title: 'High-Altitude Structural Rigging & Anti-Corrosion Spraying',
+          date: 'July 28, 2026',
+          status: 'active',
+          notes: 'OSHA-certified riggers applying marine-grade aviation safety red-and-white epoxy coatings to windward structural lattice columns. Microwave antenna mounts secured.',
+          image: '/cell-tower-repainting.jpg'
+        },
+        {
+          title: 'Guy-Wire Tensioning & Galvanized Hardware Swaps',
+          date: 'July 18, 2026',
+          status: 'done',
+          notes: 'Replaced corroded bolts with hot-dip galvanized high-tensile hardware. Tested guy-wire rope tension across all 3 anchors.',
+          image: '/cell-tower-repainting.jpg'
+        },
+        {
+          title: 'Aviation Warning Beacon & Lightning Protection Inspection',
+          date: 'July 10, 2026',
+          status: 'done',
+          notes: 'Inspected grounding grid and top red flashing beacon LEDs. Structural grounding wire resistance measured within standard ranges.'
+        },
+        {
+          title: 'Site Safety Clearance & RF Shutdown Protocols',
+          date: 'July 02, 2026',
+          status: 'done',
+          notes: 'Coordinates set with telecom operator for low-power RF windows. Safety harness and rescue system checks complete.'
         }
       ]
     }

@@ -111,8 +111,8 @@ export default function About({ lang, setCurrentPage }: AboutProps) {
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60 -mt-6"
             />
             <img 
-              src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=400&h=300&q=80" 
-              alt="Antenna Tower Inspection" 
+              src="/cell-tower-repainting.jpg" 
+              alt="DOW Telecom Cell Tower Repainting" 
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60"
             />
           </div>
@@ -124,14 +124,14 @@ export default function About({ lang, setCurrentPage }: AboutProps) {
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-4 flex flex-col items-center">
-              <div className="w-40 h-40 rounded-full border-4 border-gold-500 overflow-hidden shadow-2xl bg-slate-800">
+              <div className="w-48 sm:w-56 h-64 sm:h-72 rounded-2xl border-4 border-gold-500 overflow-hidden shadow-2xl bg-slate-800 relative group">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80" 
-                  alt="CEO R. Petronilia" 
-                  className="w-full h-full object-cover"
+                  src="/ceo-coe-petronilia.jpg" 
+                  alt="CEO & Director Coe M. Petronilia" 
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <h4 className="text-white font-bold text-lg mt-4">R. Petronilia</h4>
+              <h4 className="text-white font-bold text-lg mt-4">Coe M. Petronilia</h4>
               <p className="text-gold-500 text-xs font-semibold uppercase tracking-widest mt-1">CEO & Director</p>
             </div>
             
@@ -145,7 +145,7 @@ export default function About({ lang, setCurrentPage }: AboutProps) {
                 Whether we are painting a beach residence, wiring a shopping mall, pouring structural concrete, or climbing cell towers to protect telecom channels, our team operates with absolute precision. We are honored to serve our community and build long-term relationships based on real transparency, safety, and beautiful craftsmanship."
               </p>
               <div className="pt-2 text-right">
-                <span className="font-grotesk text-gold-500 font-bold text-sm tracking-wider">— R. Petronilia, General Manager</span>
+                <span className="font-grotesk text-gold-500 font-bold text-sm tracking-wider">— Coe M. Petronilia, CEO & Director</span>
               </div>
             </div>
           </div>

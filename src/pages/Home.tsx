@@ -111,7 +111,7 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
       title: lang === 'pap' ? 'Mantencion di Cell Tower' : lang === 'nl' ? 'Zendmast Onderhoud' : 'Cell Tower Maintenance',
       desc: lang === 'pap' ? 'Inspeccion y mantencion structural na haltura cu siguridad estricto.' : lang === 'nl' ? 'Gespecialiseerd structureel onderhoud, inspectie en schilderen van zendmasten.' : 'High-altitude structural inspection, specialized painting, and hardware upgrades.',
       icon: '📡',
-      bg: 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=600&q=80'
+      bg: '/cell-tower-repainting.jpg'
     }
   ];
 
@@ -602,10 +602,10 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
                 </h4>
                 <p className="text-slate-400 text-sm leading-relaxed">
                   {lang === 'pap'
-                    ? "Tene contacto cu nos administratornan of director R. Petronilia pa asina programa bo prome consultacion y estimacion gratis."
+                    ? "Tene contacto cu nos administratornan of Director Coe M. Petronilia pa asina programa bo prome consultacion y estimacion gratis."
                     : lang === 'nl'
-                    ? "Neem direct contact met ons op of met directeur R. Petronilia voor een vrijblijvend adviesgesprek en een inspectie op locatie."
-                    : "Reach out to our coordinators or general manager R. Petronilia to schedule a site inspection and secure a firm project estimate."}
+                    ? "Neem direct contact met ons op of met directeur Coe M. Petronilia voor een vrijblijvend adviesgesprek en een inspectie op locatie."
+                    : "Reach out to our coordinators or CEO & Director Coe M. Petronilia to schedule a site inspection and secure a firm project estimate."}
                 </p>
               </div>
 

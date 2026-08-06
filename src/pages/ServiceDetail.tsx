@@ -223,7 +223,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
     celltower: {
       title: lang === 'pap' ? 'Mantencion di Telecommunication' : lang === 'nl' ? 'Zendmasten & Telecommunicatie' : 'Cell Tower Maintenance',
       tagline: 'Certified high-altitude structural maintenance and telecommunication rigging.',
-      bgImage: 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=1200&q=80',
+      bgImage: '/cell-tower-repainting.jpg',
       description: 'Telecommunication cell towers in Aruba are highly prone to corrosion due to the salty trade winds. We provide certified high-altitude rigging services including structural inspections, guy-wire testing, bolt replacements, specialized anti-corrosion painting, and microwave antenna alignment. All climbing operations strictly follow OSHA safety regulations.',
       details: [
         'Rigging inspection and guy-wire tension checks',

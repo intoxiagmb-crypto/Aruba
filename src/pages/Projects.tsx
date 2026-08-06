@@ -115,11 +115,11 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$55,000',
       duration: '30 Days',
       rating: 5,
-      image: '/aruba_photos/optimized/dsc09684.jpg',
+      image: '/cell-tower-repainting.jpg',
       beforeImage: '/aruba_photos/optimized/image_5__upscale_1.png',
       description: 'High-altitude inspection, rust treatment with industrial steel primers, microwave alignment, and application of marine-grade safety aviation paint.',
       gallery: [
-        '/aruba_photos/optimized/dsc09684.jpg',
+        '/cell-tower-repainting.jpg',
         '/aruba_photos/optimized/image_5__upscale_1.png',
         '/aruba_photos/optimized/image_6__upscale_1.png'
       ]
