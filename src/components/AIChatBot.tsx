@@ -133,16 +133,16 @@ export default function AIChatBot({ lang, setCurrentPage, setSelectedService }: 
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-40 bg-gradient-to-tr from-gold-500 to-orange-500 hover:from-gold-600 hover:to-orange-600 text-navy-950 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/20"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-gradient-to-tr from-gold-500 to-orange-500 hover:from-gold-600 hover:to-orange-600 text-navy-950 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/20"
           title="Open AI Assistant"
         >
-          <Sparkles size={24} className="animate-pulse-subtle" />
+          <Sparkles size={22} className="animate-pulse-subtle" />
         </button>
       )}
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-96 h-[500px] rounded-2xl glass-panel-dark shadow-2xl border border-slate-700/50 flex flex-col overflow-hidden animate-fade-in">
+        <div className="fixed bottom-3 right-3 left-3 sm:left-auto sm:bottom-6 sm:right-6 z-[90] w-auto sm:w-96 max-h-[85vh] h-[480px] sm:h-[500px] rounded-2xl glass-panel-dark shadow-2xl border border-slate-700/50 flex flex-col overflow-hidden animate-fade-in">
           {/* Header */}
           <div className="bg-gradient-to-r from-navy-950 to-navy-900 px-4 py-4 flex items-center justify-between border-b border-slate-800">
             <div className="flex items-center space-x-3">
