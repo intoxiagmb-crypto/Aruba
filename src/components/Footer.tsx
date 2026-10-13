@@ -34,40 +34,74 @@ export default function Footer({ setCurrentPage, setSelectedService, lang }: Foo
           
           {/* Column 1: Brand & About */}
           <div className="flex flex-col space-y-4">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigateTo('home')}>
+            <div 
+              className="flex items-center cursor-pointer group inline-block" 
+              onClick={() => navigateTo('home')}
+              aria-label="Aruba High Maintenance Home"
+            >
               <img 
-                src="/logo.svg" 
-                alt="Aruba High Maintenance Logo" 
-                className="h-14 sm:h-16 w-auto object-contain filter drop-shadow-lg" 
+                src="/logo.png" 
+                alt="Aruba High Maintenance Contractor" 
+                className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] drop-shadow-[0_0_24px_rgba(234,179,8,0.18)]" 
               />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed pt-2">
               {t.footerAbout}
             </p>
-            <div className="flex items-center space-x-4 pt-4">
+            <div className="flex items-center space-x-3 pt-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/arubahighmaintenancecontractor/#"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-gold-500 hover:border-gold-500/50 transition-all duration-300"
+                aria-label="Facebook"
+                className="w-10 h-10 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center hover:scale-110 hover:border-[#1877F2]/60 hover:shadow-[0_0_14px_rgba(24,119,242,0.35)] transition-all duration-300 group"
               >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="11" fill="#FFFFFF" />
+                  <path
+                    fill="#1877F2"
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/arubahighmaintenancecontractor/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-gold-500 hover:border-gold-500/50 transition-all duration-300"
+                aria-label="Instagram"
+                className="w-10 h-10 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center hover:scale-110 hover:border-[#E1306C]/60 hover:shadow-[0_0_14px_rgba(225,48,108,0.35)] transition-all duration-300 group"
               >
-                <svg className="w-4 h-4" stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 24 24" fill="none">
+                  <defs>
+                    <radialGradient id="footer-ig-gradient" cx="30%" cy="107%" r="150%">
+                      <stop offset="0%" stopColor="#fdf497" />
+                      <stop offset="5%" stopColor="#fdf497" />
+                      <stop offset="45%" stopColor="#fd5949" />
+                      <stop offset="60%" stopColor="#d6249f" />
+                      <stop offset="90%" stopColor="#285AEB" />
+                    </radialGradient>
+                  </defs>
+                  <rect width="24" height="24" rx="6" fill="url(#footer-ig-gradient)" />
+                  <path
+                    fill="#ffffff"
+                    d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8.2c-1.77 0-3.2-1.43-3.2-3.2s1.43-3.2 3.2-3.2 3.2 1.43 3.2 3.2-1.43 3.2-3.2 3.2zm6.2-8.3c-.64 0-1.16.52-1.16 1.16s.52 1.16 1.16 1.16 1.16-.52 1.16-1.16-.52-1.16-1.16-1.16zm2.8 1.9c-.06-1.3-.36-2.45-1.31-3.4-.95-.95-2.1-1.25-3.4-1.31-1.34-.08-5.36-.08-6.7 0-1.3.06-2.45.36-3.4 1.31-.95.95-1.25 2.1-1.31 3.4-.08 1.34-.08 5.36 0 6.7.06 1.3.36 2.45 1.31 3.4.95.95 2.1 1.25 3.4 1.31 1.34.08 5.36.08 6.7 0 1.3-.06 2.45-.36 3.4-1.31.95-.95 1.25-2.1 1.31-3.4.08-1.34.08-5.36 0-6.7zm-2.16 8.52c-.28.71-.83 1.26-1.54 1.54-.9.36-3.04.28-5.3.28s-4.4.08-5.3-.28c-.71-.28-1.26-.83-1.54-1.54-.36-.9-.28-3.04-.28-5.3s-.08-4.4.28-5.3c.28-.71.83-1.26 1.54-1.54.9-.36 3.04-.28 5.3-.28s4.4-.08 5.3.28c.71.28 1.26.83 1.54 1.54.36.9.28 3.04.28 5.3s.08 4.4-.28 5.3z"
+                  />
+                </svg>
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-gold-500 hover:border-gold-500/50 transition-all duration-300"
+                aria-label="LinkedIn"
+                className="w-10 h-10 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center hover:scale-110 hover:border-[#0A66C2]/60 hover:shadow-[0_0_14px_rgba(10,102,194,0.35)] transition-all duration-300 group"
               >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="4" fill="#0A66C2" />
+                  <path
+                    fill="#ffffff"
+                    d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.14 8.28h3.6V19.7h-3.6V8.28zm5.82 0h3.45v1.56h.05c.48-.91 1.66-1.87 3.42-1.87 3.65 0 4.33 2.4 4.33 5.53V19.7h-3.6v-5.46c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V19.7H8.96V8.28z"
+                  />
+                </svg>
               </a>
             </div>
           </div>

@@ -76,14 +76,14 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
       title: lang === 'pap' ? 'Pintura Profesional' : lang === 'nl' ? 'Professioneel Schilderwerk' : 'Professional Painting',
       desc: lang === 'pap' ? 'Trabou di pinta di interior y exterior cu materialnan resistente.' : lang === 'nl' ? 'Hoogwaardig binnen- en buitenschilderwerk bestand tegen het tropisch klimaat.' : 'Premium interior and exterior painting tailored to withstand Aruba\'s tropical climate.',
       icon: '🎨',
-      bg: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80'
+      bg: '/painting-scaffold-ceiling-prep.jpg'
     },
     {
       id: 'electrical',
       title: lang === 'pap' ? 'Instalacion de Electricidad' : lang === 'nl' ? 'Elektrische Installaties' : 'Electrical Installations',
       desc: lang === 'pap' ? 'Servicio di coriente residencial y comercial y reparacion inmediato.' : lang === 'nl' ? 'Gecertificeerde installaties, inspecties en noodhulp voor woningen en kantoren.' : 'Safe, certified electrical installations, panels, and emergency troubleshooting.',
       icon: '⚡',
-      bg: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80'
+      bg: '/electrician-ceiling-conduit-wiring.jpg'
     },
     {
       id: 'plumbing',
@@ -97,14 +97,14 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
       title: lang === 'pap' ? 'Funderings & Concreto' : lang === 'nl' ? 'Fundering & Betonwerk' : 'Foundations & Concrete',
       desc: lang === 'pap' ? 'Trahamento di fundeshi solido, caminda y betòn decorativo.' : lang === 'nl' ? 'Constructief betonwerk, vloeren, opritten en decoratieve afwerkingen.' : 'Solid structural foundations, driveways, retaining walls, and decorative finishes.',
       icon: '🧱',
-      bg: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80'
+      bg: '/concrete-pouring-chute-worker.jpg'
     },
     {
       id: 'landscaping',
       title: lang === 'pap' ? 'Landscaping & Piscina' : lang === 'nl' ? 'Tuinarchitectuur & Zwembaden' : 'Landscaping & Pool Areas',
       desc: lang === 'pap' ? 'Diseño di hardin, sistema di muha y area di pool.' : lang === 'nl' ? 'Modern tuinontwerp, automatische irrigatie en luxe zwembadomgevingen.' : 'Complete garden architecture, automated irrigation, and resort-style pool decks.',
       icon: '🌴',
-      bg: '/aruba_photos/optimized/dsc09778.jpg'
+      bg: '/landscaping-pool-patio-bbq.jpg'
     },
     {
       id: 'celltower',
@@ -251,13 +251,13 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
                 className="group cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col h-full"
               >
                 {/* Image top with overlay */}
-                <div className="h-48 w-full relative overflow-hidden bg-slate-800">
+                <div className="h-52 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-800">
                   <img 
                     src={service.bg} 
                     alt={service.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/25 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute top-4 left-4 bg-navy-950/85 backdrop-blur-sm text-lg w-10 h-10 rounded-xl flex items-center justify-center shadow-md">
                     {service.icon}
                   </div>
@@ -404,8 +404,8 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
               <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-gold-500 rounded-tl-xl pointer-events-none" />
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-gold-500 rounded-br-xl pointer-events-none" />
               <img 
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" 
-                alt="Contractor Team Work" 
+                src="/painting-scaffold-ceiling-prep.jpg" 
+                alt="Aruba High Maintenance Painting Crew On-Site" 
                 className="w-full h-[450px] object-cover rounded-xl shadow-xl"
               />
             </div>

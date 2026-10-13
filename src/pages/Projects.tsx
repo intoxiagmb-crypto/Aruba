@@ -41,70 +41,75 @@ export default function Projects({ lang }: ProjectsProps) {
   const projectsData: Project[] = [
     {
       id: 1,
-      title: 'Luxury Villa Exterior Refinishing',
+      title: 'Luxury Villa Ceiling Surface Prep & Painting',
       category: 'painting',
       location: 'Noord, Aruba',
       budget: '$18,500',
       duration: '14 Days',
       rating: 5,
-      image: '/aruba_photos/optimized/2024-07-11_20-10-42_-_create_an_image_of_a_modern__luxurious_house_with_a_minimalist_design__the_facade_should_feature_cle.jpeg',
-      beforeImage: '/aruba_photos/optimized/img_1316.jpg',
-      description: 'Full stripping, sanding, and elastomeric weatherproofing application on a multi-level luxury estate. Included anti-salinity protective topcoats to resist sea spray.',
+      image: '/painting-scaffold-ceiling-prep.jpg',
+      beforeImage: '/painting-high-reach-pole-roller.jpg',
+      description: 'Comprehensive high-ceiling surface preparation, orbital sanding, and premium anti-salinity elastomeric painting using certified mobile scaffolding systems.',
       gallery: [
-        '/aruba_photos/optimized/2024-07-11_20-10-42_-_create_an_image_of_a_modern__luxurious_house_with_a_minimalist_design__the_facade_should_feature_cle.jpeg',
-        '/aruba_photos/optimized/img_1316.jpg',
-        '/aruba_photos/optimized/img_1335.jpg'
+        '/painting-scaffold-ceiling-prep.jpg',
+        '/painting-ceiling-sander-closeup.jpg',
+        '/painting-scaffold-work-platform.jpg',
+        '/painting-high-reach-pole-roller.jpg'
       ]
     },
     {
       id: 2,
-      title: 'Stamped Concrete Pool Deck & Patio',
+      title: 'Structural Concrete Foundation Pouring & Rebar Reinforcement',
       category: 'concrete',
       location: 'Eagle Beach, Aruba',
-      budget: '$34,000',
+      budget: '$38,000',
       duration: '18 Days',
       rating: 5,
-      image: '/aruba_photos/optimized/dsc09751.jpg',
-      beforeImage: '/aruba_photos/optimized/img_1228.jpg',
-      description: 'Structural concrete pouring followed by custom slate-pattern stamp texturing, UV stable color hardener application, and chemical sealing for pool-side grip.',
+      image: '/concrete-pouring-chute-worker.jpg',
+      beforeImage: '/concrete-foundation-pouring-angle.jpg',
+      description: 'Site excavation, structural steel rebar framework installation, and direct concrete chute pouring with on-site leveling and curing compounds.',
       gallery: [
-        '/aruba_photos/optimized/dsc09751.jpg',
-        '/aruba_photos/optimized/img_1228.jpg',
-        '/aruba_photos/optimized/dsc09778.jpg'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Resort Walkway Tropical Landscaping',
-      category: 'landscaping',
-      location: 'Palm Beach, Aruba',
-      budget: '$45,000',
-      duration: '25 Days',
-      rating: 5,
-      image: '/aruba_photos/optimized/dsc09778.jpg',
-      beforeImage: '/aruba_photos/optimized/img_1335.jpg',
-      description: 'Total design and planting of drought-resistant palm layouts, volcanic rocks, automated smart drip irrigation, and low-voltage landscape lighting.',
-      gallery: [
-        '/aruba_photos/optimized/dsc09778.jpg',
-        '/aruba_photos/optimized/img_1335.jpg',
+        '/concrete-pouring-chute-worker.jpg',
+        '/concrete-foundation-pouring-angle.jpg',
+        '/concrete-mixer-chute-crew.jpg',
         '/aruba_photos/optimized/dsc09751.jpg'
       ]
     },
     {
-      id: 4,
-      title: 'Commercial Plaza Panel Upgrade',
-      category: 'electrical',
-      location: 'Oranjestad, Aruba',
-      budget: '$12,800',
-      duration: '5 Days',
+      id: 3,
+      title: 'Luxury Villa Garden Bed & Tropical Landscaping',
+      category: 'landscaping',
+      location: 'Palm Beach, Aruba',
+      budget: '$28,500',
+      duration: '18 Days',
       rating: 5,
-      image: '/aruba_photos/optimized/img_1232.jpg',
-      beforeImage: '/aruba_photos/optimized/img_1310.jpg',
-      description: 'Removal of corroded switchboards, upgrading the main distribution frame, implementing automatic generator bypass, and certifying safety grounds.',
+      image: '/landscaping-garden-bed-pebbles.jpg',
+      beforeImage: '/landscaping-tropical-plants-stones.jpg',
+      description: 'Total design and planting of drought-resistant oleander flowers, ornamental shrubs, white river pebble gravel bedding, and synthetic turf lawn borders with smart drip irrigation.',
       gallery: [
-        '/aruba_photos/optimized/img_1232.jpg',
-        '/aruba_photos/optimized/img_1310.jpg',
-        '/aruba_photos/optimized/img_1315.jpg'
+        '/landscaping-garden-bed-pebbles.jpg',
+        '/landscaping-tropical-plants-stones.jpg',
+        '/landscaping-pool-patio-bbq.jpg',
+        '/landscaping-pool-villa-turf.jpg'
+      ]
+    },
+    {
+      id: 4,
+      title: 'Villa Electrical Rough-In & Ceiling Conduit Wiring',
+      category: 'electrical',
+      location: 'Noord / Oranjestad, Aruba',
+      budget: '$18,500',
+      duration: '12 Days',
+      rating: 5,
+      image: '/electrician-ceiling-conduit-wiring.jpg',
+      beforeImage: '/electrical-ceiling-conduit-framing.jpg',
+      description: 'Comprehensive electrical rough-in installation featuring overhead galvanized steel furring channels, ceiling conduit runs, junction boxes, and temporary site power distribution board.',
+      gallery: [
+        '/electrician-ceiling-conduit-wiring.jpg',
+        '/electrician-scaffolding-conduit-install.jpg',
+        '/electrical-ceiling-conduit-framing.jpg',
+        '/electrical-rough-in-framing-room.jpg',
+        '/electrical-site-power-distribution.jpg'
       ]
     },
     {
@@ -116,12 +121,13 @@ export default function Projects({ lang }: ProjectsProps) {
       duration: '30 Days',
       rating: 5,
       image: '/cell-tower-repainting.jpg',
-      beforeImage: '/aruba_photos/optimized/image_5__upscale_1.png',
+      beforeImage: '/cell-tower-boom-lift.jpg',
       description: 'High-altitude inspection, rust treatment with industrial steel primers, microwave alignment, and application of marine-grade safety aviation paint.',
       gallery: [
         '/cell-tower-repainting.jpg',
-        '/aruba_photos/optimized/image_5__upscale_1.png',
-        '/aruba_photos/optimized/image_6__upscale_1.png'
+        '/cell-tower-antenna-crane.jpg',
+        '/cell-tower-boom-lift.jpg',
+        '/cell-tower-mast-crane.jpg'
       ]
     },
     {
@@ -140,25 +146,93 @@ export default function Projects({ lang }: ProjectsProps) {
         '/aruba_photos/optimized/2024-07-07_12-03-23_-_elegant_living_room__beautiful_white_walls___pale_colors__.jpeg',
         '/aruba_photos/optimized/img_1232.jpg'
       ]
+    },
+    {
+      id: 7,
+      title: 'High-Reach Wall & Ceiling Finishing',
+      category: 'painting',
+      location: 'Palm Beach, Aruba',
+      budget: '$24,000',
+      duration: '18 Days',
+      rating: 5,
+      image: '/painting-high-reach-pole-roller.jpg',
+      beforeImage: '/painting-ceiling-sander-closeup.jpg',
+      description: 'Precision interior edging, telescopic extension pole application, and dust-controlled ceiling sanding across estate living spaces.',
+      gallery: [
+        '/painting-high-reach-pole-roller.jpg',
+        '/painting-ceiling-sander-closeup.jpg',
+        '/painting-scaffold-ceiling-prep.jpg',
+        '/painting-scaffold-work-platform.jpg'
+      ]
+    },
+    {
+      id: 8,
+      title: 'Stamped Concrete Pool Deck & Patio',
+      category: 'concrete',
+      location: 'Palm Beach, Aruba',
+      budget: '$34,000',
+      duration: '15 Days',
+      rating: 5,
+      image: '/aruba_photos/optimized/dsc09751.jpg',
+      beforeImage: '/concrete-foundation-pouring-angle.jpg',
+      description: 'Structural concrete pouring followed by custom slate-pattern stamp texturing, UV stable color hardener application, and chemical sealing for pool-side grip.',
+      gallery: [
+        '/aruba_photos/optimized/dsc09751.jpg',
+        '/concrete-pouring-chute-worker.jpg',
+        '/aruba_photos/optimized/dsc09778.jpg'
+      ]
+    },
+    {
+      id: 9,
+      title: 'Resort Swimming Pool Surround, Palms & Outdoor Lounge',
+      category: 'landscaping',
+      location: 'Malmok / Noord, Aruba',
+      budget: '$52,000',
+      duration: '28 Days',
+      rating: 5,
+      image: '/landscaping-pool-patio-bbq.jpg',
+      beforeImage: '/landscaping-pool-villa-turf.jpg',
+      description: 'Complete outdoor living transformation: luxury swimming pool deck finishing, lush tropical palms, outdoor BBQ kitchen integration, and ultra-durable artificial grass turf suited for Aruba sunshine.',
+      gallery: [
+        '/landscaping-pool-patio-bbq.jpg',
+        '/landscaping-pool-villa-turf.jpg',
+        '/landscaping-garden-bed-pebbles.jpg',
+        '/landscaping-tropical-plants-stones.jpg'
+      ]
     }
   ];
 
   // List of all extracted photos for the General Gallery Grid view
   const allPhotos = [
+    { src: '/landscaping-garden-bed-pebbles.jpg', caption: 'White River Pebble Garden Bed & Oleander Planting', category: 'Landscaping' },
+    { src: '/landscaping-tropical-plants-stones.jpg', caption: 'Drought-Resistant Tropical Garden Accent Arrangement', category: 'Landscaping' },
+    { src: '/landscaping-pool-patio-bbq.jpg', caption: 'Resort Swimming Pool, BBQ Kitchen & Palm Oasis', category: 'Landscaping' },
+    { src: '/landscaping-pool-villa-turf.jpg', caption: 'Villa Swimming Pool & Synthetic Turf Installation', category: 'Landscaping' },
+    { src: '/electrician-ceiling-conduit-wiring.jpg', caption: 'Ceiling Conduit Wiring & Junction Box Installation', category: 'Electrical' },
+    { src: '/electrician-scaffolding-conduit-install.jpg', caption: 'Mobile Scaffold Overhead Electrical Conduit Fitting', category: 'Electrical' },
+    { src: '/electrical-ceiling-conduit-framing.jpg', caption: 'Ceiling Metal Furring & Conduit Distribution Box', category: 'Electrical' },
+    { src: '/electrical-rough-in-framing-room.jpg', caption: 'Electrical Rough-In & Metal Ceiling Grid Staging', category: 'Electrical' },
+    { src: '/electrical-site-power-distribution.jpg', caption: 'On-Site Heavy Duty Power Distribution Board', category: 'Electrical' },
+    { src: '/painting-scaffold-ceiling-prep.jpg', caption: 'Ceiling Sanding & Mobile Scaffolding Setup', category: 'Painting' },
+    { src: '/painting-ceiling-sander-closeup.jpg', caption: 'Precision Surface Sanding with PPE Dust Mask', category: 'Painting' },
+    { src: '/painting-scaffold-work-platform.jpg', caption: 'Mobile Scaffold Platform & Primer Prep Work', category: 'Painting' },
+    { src: '/painting-high-reach-pole-roller.jpg', caption: 'Telescopic Extension Pole High-Reach Painting', category: 'Painting' },
+    { src: '/concrete-pouring-chute-worker.jpg', caption: 'Concrete Chute Pouring & Rebar Setup', category: 'Beton & Concrete' },
+    { src: '/concrete-foundation-pouring-angle.jpg', caption: 'Foundation Concrete Pouring & Leveling', category: 'Beton & Concrete' },
+    { src: '/concrete-mixer-chute-crew.jpg', caption: 'Crew Directing Mixer Truck Chute', category: 'Beton & Concrete' },
     { src: '/aruba_photos/optimized/2024-07-11_20-10-42_-_create_an_image_of_a_modern__luxurious_house_with_a_minimalist_design__the_facade_should_feature_cle.jpeg', caption: 'Luxury Villa Exterior', category: 'Construction' },
     { src: '/aruba_photos/optimized/2024-07-07_12-03-23_-_elegant_living_room__beautiful_white_walls___pale_colors__.jpeg', caption: 'Modern Open Living Space', category: 'Cabinetry & Remodel' },
     { src: '/aruba_photos/optimized/dsc09751.jpg', caption: 'Concrete Deck Pouring', category: 'Beton & Concrete' },
-    { src: '/aruba_photos/optimized/dsc09778.jpg', caption: 'Resort Surrounds Paving', category: 'Landscaping' },
+    { src: '/aruba_photos/optimized/dsc09778.jpg', caption: 'Resort Surrounds Paving Installation', category: 'Beton & Concrete' },
     { src: '/aruba_photos/optimized/dsc09684.jpg', caption: 'Mast Inspection & Base Prep', category: 'Telecom Towers' },
-    { src: '/aruba_photos/optimized/image_5__upscale_1.png', caption: 'Tower Rigging High Altitude', category: 'Telecom Towers' },
-    { src: '/aruba_photos/optimized/image_6__upscale_1.png', caption: 'Salty-Air Industrial Painting', category: 'Telecom Towers' },
-    { src: '/aruba_photos/optimized/img_1228.jpg', caption: 'Steel Rebar Placement', category: 'Beton & Concrete' },
-    { src: '/aruba_photos/optimized/img_1232.jpg', caption: 'Certified Breaker Upgrade', category: 'Electrical' },
-    { src: '/aruba_photos/optimized/img_1306.jpg', caption: 'Villa Column Frameworks', category: 'Construction' },
-    { src: '/aruba_photos/optimized/img_1310.jpg', caption: 'Electrical Cabinet Routing', category: 'Electrical' },
-    { src: '/aruba_photos/optimized/img_1315.jpg', caption: 'Grounding Rod Resistance Test', category: 'Electrical' },
-    { src: '/aruba_photos/optimized/img_1316.jpg', caption: 'Prep Work Before Sanding', category: 'Painting' },
-    { src: '/aruba_photos/optimized/img_1335.jpg', caption: 'Excavation & Foundations', category: 'Construction' }
+    { src: '/cell-tower-repainting.jpg', caption: 'Cell Tower Antenna Rigging & Crane Service', category: 'Telecom Towers' },
+    { src: '/cell-tower-boom-lift.jpg', caption: 'High-Reach Cherry Picker Maintenance (Snorkel 126 Ft)', category: 'Telecom Towers' },
+    { src: '/cell-tower-mast-crane.jpg', caption: 'Cell Tower Lattice Mast Crane Installation', category: 'Telecom Towers' },
+    { src: '/aruba_photos/optimized/img_1306.jpg', caption: 'Villa Patio Entrance & Finishing', category: 'Construction' },
+    { src: '/aruba_photos/optimized/img_1310.jpg', caption: 'Resort Villa Courtyard & Pool', category: 'Landscaping' },
+    { src: '/aruba_photos/optimized/img_1315.jpg', caption: 'Patio Slider Door & Poolside View', category: 'Construction' },
+    { src: '/aruba_photos/optimized/img_1316.jpg', caption: 'Custom Built-In Walk-In Closet', category: 'Cabinetry & Remodel' },
+    { src: '/aruba_photos/optimized/img_1335.jpg', caption: 'Luxury Stone Basin Bathroom Vanity', category: 'Construction' }
   ];
 
   const categories = [
@@ -262,7 +336,7 @@ export default function Projects({ lang }: ProjectsProps) {
                     alt={project.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-navy-950/40 group-hover:bg-navy-950/20 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-navy-950/15 group-hover:bg-navy-950/0 transition-colors duration-300 pointer-events-none" />
                   
                   {/* Float tag */}
                   <span className="absolute top-4 left-4 bg-navy-950/85 backdrop-blur-sm text-gold-500 text-[10px] font-black uppercase tracking-widest px-2.5 py-1.5 rounded-lg border border-white/5">
@@ -285,7 +359,7 @@ export default function Projects({ lang }: ProjectsProps) {
 
                 {/* Text Specs */}
                 <div className="p-6">
-                  <h3 className="text-navy-900 dark:text-white font-extrabold text-base sm:text-lg mb-4 line-clamp-1 group-hover:text-gold-500 transition-colors">
+                  <h3 className="text-navy-900 dark:text-white font-extrabold text-base sm:text-lg mb-2 line-clamp-2 min-h-[3rem] group-hover:text-gold-500 transition-colors">
                     {project.title}
                   </h3>
                   

@@ -23,11 +23,12 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
     materials: string[];
     pricing: string;
     faqs: { q: string; a: string }[];
+    galleryImages?: string[];
   }> = {
     painting: {
       title: lang === 'pap' ? 'Pintura Profesional' : lang === 'nl' ? 'Professioneel Schilderwerk' : 'Professional Painting',
       tagline: 'High-end aesthetic finishing engineered to resist salinity and blistering.',
-      bgImage: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80',
+      bgImage: '/painting-scaffold-ceiling-prep.jpg',
       description: 'Aruba\'s marine environment, high humidity, and intense UV index cause normal paint to blister, fade, and peel within months. We provide comprehensive preparation (scraping, high-pressure washing, crack sealing) and apply marine-grade, salt-resistant undercoats and premium weatherproofing paint to guarantee long-term aesthetic beauty.',
       details: [
         'Complete exterior coating & color consultation',
@@ -50,12 +51,25 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
       faqs: [
         { q: 'How often should a house in Aruba be repainted?', a: 'Due to the high salt concentration in coastal areas like Palm Beach or Noord, exterior walls should be repainted every 5 to 7 years with premium elastomeric coatings to prevent concrete carbonation.' },
         { q: 'Do you offer color consultations?', a: 'Yes! We supply detailed color books and apply test patches to your walls under local solar light to help you choose the best hues.' }
+      ],
+      galleryImages: [
+        '/painting-scaffold-ceiling-prep.jpg',
+        '/painting-ceiling-sander-closeup.jpg',
+        '/painting-scaffold-work-platform.jpg',
+        '/painting-high-reach-pole-roller.jpg'
       ]
     },
     electrical: {
       title: lang === 'pap' ? 'Instalacion di Electricidad' : lang === 'nl' ? 'Elektrische Installaties' : 'Electrical Installations',
       tagline: 'Safe, certified circuitry and emergency maintenance for homes & commercial facilities.',
-      bgImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80',
+      bgImage: '/electrician-ceiling-conduit-wiring.jpg',
+      galleryImages: [
+        '/electrician-ceiling-conduit-wiring.jpg',
+        '/electrician-scaffolding-conduit-install.jpg',
+        '/electrical-ceiling-conduit-framing.jpg',
+        '/electrical-rough-in-framing-room.jpg',
+        '/electrical-site-power-distribution.jpg'
+      ],
       description: 'Faulty wiring in tropical salt-air zones is a leading cause of electrical fires and device damage due to corrosion. Our certified electricians handle new property rough-ins, breaker panel upgrades, grounding rod testing, LED installations, and supply 24/7 emergency response for power failures or short circuits.',
       details: [
         'Complete property rewiring and breaker setups',
@@ -139,7 +153,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
     concrete: {
       title: lang === 'pap' ? 'Fundeshi & Concreto' : lang === 'nl' ? 'Beton & Funderingen' : 'Concrete & Foundations',
       tagline: 'High-strength structural pouring and elegant decorative finishes.',
-      bgImage: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80',
+      bgImage: '/concrete-pouring-chute-worker.jpg',
       description: 'Concrete is the backbone of Aruban architecture. We mix and pour premium load-bearing foundations, structural columns, beams, driveways, and parking slabs. We also offer decorative stamped concrete with custom textures (wood-plank, slate, ashlar stone) to create premium pool decks and patios.',
       details: [
         'Load-bearing foundations and structural pillar casting',
@@ -162,6 +176,12 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
       faqs: [
         { q: 'How long does concrete take to cure?', a: 'While concrete dries to the touch in 24-48 hours, it takes 28 days to reach full structural design strength. Vehicles should not drive on driveways for at least 7 days.' },
         { q: 'Why does concrete crack in Aruba, and how do you prevent it?', a: 'Rapid moisture loss due to trade winds causes cracking. We prevent this by cutting expansion joints at precise intervals and applying curing compounds.' }
+      ],
+      galleryImages: [
+        '/concrete-pouring-chute-worker.jpg',
+        '/concrete-foundation-pouring-angle.jpg',
+        '/concrete-mixer-chute-crew.jpg',
+        '/aruba_photos/optimized/dsc09751.jpg'
       ]
     },
     carpentry: {
@@ -195,7 +215,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
     landscaping: {
       title: lang === 'pap' ? 'Diseño di Hardin' : lang === 'nl' ? 'Tuinaanleg & Irrigatie' : 'Landscaping & Pool Decks',
       tagline: 'Lush tropical oasis design, smart water lines, and poolside spaces.',
-      bgImage: '/aruba_photos/optimized/dsc09778.jpg',
+      bgImage: '/landscaping-pool-patio-bbq.jpg',
       description: 'Create a paradise in your backyard. We design water-efficient tropical landscapes using native palms, bougainvillea, and cacti that thrive in Aruba. We lay out automated drip irrigation lines, build stamped concrete pool decks, install artificial or natural turf, and install modern outdoor LED lighting.',
       details: [
         'Tropical landscape design and planting arrangements',
@@ -319,6 +339,30 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
                 ))}
               </div>
             </div>
+
+            {/* On-Site Work & Techniques Gallery */}
+            {content.galleryImages && content.galleryImages.length > 0 && (
+              <div>
+                <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-4 flex items-center justify-between">
+                  <span>{lang === 'pap' ? 'Fotonan di Trabou na Site' : lang === 'nl' ? 'Werkzaamheden op Locatie' : 'On-Site Work & Crew'}</span>
+                  <span className="text-xs text-gold-500 font-bold uppercase tracking-wider">{content.galleryImages.length} Real Photos</span>
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {content.galleryImages.map((img, i) => (
+                    <div key={i} className="group relative rounded-xl overflow-hidden shadow-md aspect-square bg-slate-800">
+                      <img 
+                        src={img} 
+                        alt={`${content.title} on-site photo ${i + 1}`} 
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5">
+                        <span className="text-[10px] text-white font-bold tracking-wide">Crew on Site</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* FAQs */}
             <div>

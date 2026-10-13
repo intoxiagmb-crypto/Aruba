@@ -43,30 +43,32 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
       estFinishDate: 'July 15, 2026',
       logs: [
         {
-          title: 'Final Polyurethane Coat Application',
+          title: 'High-Reach Wall & Ceiling Finishing',
           date: 'July 05, 2026',
           status: 'active',
-          notes: 'Applying the final salinity-shield topcoats on the eastern windward balconies. Checking curing rates against humidity.',
-          image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80'
+          notes: 'Applying the final salinity-shield topcoats on the eastern windward balconies using telescopic extension poles.',
+          image: '/painting-high-reach-pole-roller.jpg'
         },
         {
-          title: 'Basecoat Undersealer & Stucco Repair',
+          title: 'Precision Ceiling Sanding & Surface Prep',
           date: 'June 25, 2026',
           status: 'done',
-          notes: 'Completed structural crack repairs on exterior stucco. Applied Loxon anti-alkali primer base layer island-wide.',
-          image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80'
+          notes: 'Completed orbital ceiling sanding with dust masks. Applied Loxon anti-alkali primer base layer island-wide.',
+          image: '/painting-ceiling-sander-closeup.jpg'
         },
         {
-          title: 'High-Pressure Chemical Cleaning & Preparation',
+          title: 'Mobile Scaffolding Surface Sanding',
           date: 'June 15, 2026',
           status: 'done',
-          notes: 'High-pressure wash complete. Salt residues, mold, and loose old paint completely stripped from masonry boundaries.'
+          notes: 'Operating on yellow mobile scaffolding units for ceiling leveling, joint compound sanding, and edge prep.',
+          image: '/painting-scaffold-ceiling-prep.jpg'
         },
         {
-          title: 'Site Scaffolding Setup & Safety Inspection',
+          title: 'Site Scaffolding Setup & Primer Staging',
           date: 'June 11, 2026',
           status: 'done',
-          notes: 'Constructed external scaffolding systems. Inspected safety tie-backs. Standard compliance approved.'
+          notes: 'Constructed mobile scaffolding systems. Staged commercial grade primers and safety platforms.',
+          image: '/painting-scaffold-work-platform.jpg'
         }
       ]
     },
@@ -80,17 +82,25 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
       estFinishDate: 'August 05, 2026',
       logs: [
         {
-          title: 'Concrete Pouring & Leveling',
+          title: 'Direct Chute Concrete Pouring & Leveling',
           date: 'July 04, 2026',
           status: 'active',
-          notes: 'Pouring structural load-bearing concrete floor slabs. Vibrating concrete to prevent internal micro-fissures.',
-          image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&q=80'
+          notes: 'Direct chute pouring from ready-mix truck over reinforcement rebar mesh. Vibrating and screeding to prevent air pockets.',
+          image: '/concrete-pouring-chute-worker.jpg'
         },
         {
-          title: 'Steel Rebar Framing Layout',
+          title: 'Continuous Foundation Pouring & Edge Guidance',
+          date: 'July 02, 2026',
+          status: 'done',
+          notes: 'Continuous volumetric pouring operations. Technicians guiding the discharge chute across formwork channels.',
+          image: '/concrete-foundation-pouring-angle.jpg'
+        },
+        {
+          title: 'Mixer Truck Staging & Steel Rebar Framework',
           date: 'June 28, 2026',
           status: 'done',
-          notes: 'Constructed steel grids. Tension checked by engineering consultant. Complies with DOW codes.'
+          notes: 'Constructed reinforced steel grids. Formwork inspection approved according to DOW structural codes.',
+          image: '/concrete-mixer-chute-crew.jpg'
         },
         {
           title: 'Excavation & Trenching Operations',
@@ -114,7 +124,7 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
           date: 'June 05, 2026',
           status: 'done',
           notes: 'Irrigation timers programmed for early morning/late evening cycles. Custom turf grass curbed correctly. Client approved and handed over.',
-          image: '/aruba_photos/optimized/dsc09778.jpg'
+          image: '/landscaping-garden-bed-pebbles.jpg'
         },
         {
           title: 'Palm Trees Planting & Topsoil Layout',
@@ -151,7 +161,7 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
           date: 'July 18, 2026',
           status: 'done',
           notes: 'Replaced corroded bolts with hot-dip galvanized high-tensile hardware. Tested guy-wire rope tension across all 3 anchors.',
-          image: '/cell-tower-repainting.jpg'
+          image: '/cell-tower-boom-lift.jpg'
         },
         {
           title: 'Aviation Warning Beacon & Lightning Protection Inspection',
@@ -164,6 +174,45 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
           date: 'July 02, 2026',
           status: 'done',
           notes: 'Coordinates set with telecom operator for low-power RF windows. Safety harness and rescue system checks complete.'
+        }
+      ]
+    },
+    'ARUBA-2026-005': {
+      code: 'ARUBA-2026-005',
+      name: 'Villa Electrical Rough-In & Ceiling Conduit Network',
+      location: 'Noord / Palm Beach, Aruba',
+      manager: 'Lead Electrician J. Rasmijn',
+      completion: 65,
+      startDate: 'July 05, 2026',
+      estFinishDate: 'August 12, 2026',
+      logs: [
+        {
+          title: 'Overhead Ceiling Conduit Wiring & Pull Box Assembly',
+          date: 'July 14, 2026',
+          status: 'active',
+          notes: 'Electrician operating on rolling scaffold installing overhead conduit lines through metal furring channels into primary junction box.',
+          image: '/electrician-ceiling-conduit-wiring.jpg'
+        },
+        {
+          title: 'Scaffold High-Reach Conduit Fitting & Securement',
+          date: 'July 12, 2026',
+          status: 'done',
+          notes: 'Fitted multi-line conduit lines across ceiling channels with protective clips and pull boxes.',
+          image: '/electrician-scaffolding-conduit-install.jpg'
+        },
+        {
+          title: 'Ceiling Furring Channels & Junction Box Inspection',
+          date: 'July 09, 2026',
+          status: 'done',
+          notes: 'Installed heavy-duty ceiling furring grid and blue junction boxes aligned for lighting fixtures.',
+          image: '/electrical-ceiling-conduit-framing.jpg'
+        },
+        {
+          title: 'Temporary Site Power Distribution Board Setup',
+          date: 'July 06, 2026',
+          status: 'done',
+          notes: 'Constructed weather-safe heavy duty jobsite power distribution board with GFCI breakers for construction tools.',
+          image: '/electrical-site-power-distribution.jpg'
         }
       ]
     }
@@ -218,14 +267,15 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
           </form>
 
           {/* Help box for demo codes */}
-          <div className="flex items-start space-x-2 text-[10px] sm:text-xs text-slate-400 mt-4 bg-slate-50 dark:bg-navy-950/40 p-3 rounded-lg border border-slate-200 dark:border-slate-800/80">
+          <div className="flex items-start space-x-2 text-[10px] sm:text-xs text-slate-400 mt-4 bg-slate-50 dark:bg-navy-950/40 p-3 rounded-lg border border-slate-200 dark:border-slate-850/80">
             <AlertCircle size={14} className="text-gold-500 flex-shrink-0 mt-0.5" />
             <div>
               <p className="font-bold text-slate-300">Demo Reference Codes:</p>
               <p className="mt-1">
-                Try out <span className="font-mono text-gold-500 font-bold">ARUBA-2026-001</span> (Painting, 85%),{' '}
-                <span className="font-mono text-gold-500 font-bold">ARUBA-2026-002</span> (Concrete, 40%), or{' '}
-                <span className="font-mono text-gold-500 font-bold">ARUBA-2026-003</span> (Landscaping, 100%).
+                Try out <span className="font-mono text-gold-500 font-bold">ARUBA-2026-001</span> (Painting),{' '}
+                <span className="font-mono text-gold-500 font-bold">ARUBA-2026-002</span> (Concrete),{' '}
+                <span className="font-mono text-gold-500 font-bold">ARUBA-2026-004</span> (Telecom Towers), or{' '}
+                <span className="font-mono text-gold-500 font-bold">ARUBA-2026-005</span> (Electrical, 65%).
               </p>
             </div>
           </div>

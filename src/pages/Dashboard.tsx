@@ -227,15 +227,15 @@ export default function Dashboard({ lang }: DashboardProps) {
               <div className="space-y-8 font-sans">
                 {/* Header branding */}
                 <div className="flex items-center justify-between border-b border-slate-100 pb-6">
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-4">
                     <img 
-                      src="/logo.svg" 
-                      alt="Aruba High Maintenance Logo" 
-                      className="h-12 w-auto object-contain" 
+                      src="/logo.png" 
+                      alt="Aruba High Maintenance Contractor" 
+                      className="h-14 w-auto object-contain" 
                     />
-                    <div>
-                      <h4 className="font-extrabold text-base text-navy-900 tracking-wider">ARUBA HIGH MAINTENANCE</h4>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-0.5">Contractor Services</p>
+                    <div className="border-l border-slate-200 pl-4 py-0.5">
+                      <p className="text-xs font-bold text-navy-900 uppercase tracking-wider">General Contractor Services</p>
+                      <p className="text-[11px] text-slate-500 font-medium">Italiestraat 38 unit 5B, Oranjestad, Aruba</p>
                     </div>
                   </div>
                   <div className="text-right">

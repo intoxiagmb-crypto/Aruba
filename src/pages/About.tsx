@@ -96,18 +96,18 @@ export default function About({ lang, setCurrentPage }: AboutProps) {
 
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <img 
-              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&h=300&q=80" 
-              alt="Concrete foundation work" 
+              src="/concrete-pouring-chute-worker.jpg" 
+              alt="Structural Concrete Foundation Pouring & Rebar Setup" 
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60"
             />
             <img 
-              src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&h=300&q=80" 
-              alt="House Painting" 
+              src="/electrician-ceiling-conduit-wiring.jpg" 
+              alt="Certified Electrical Rough-In & Ceiling Conduit Network" 
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60 mt-6"
             />
             <img 
-              src="/aruba_photos/optimized/dsc09778.jpg" 
-              alt="Luxury garden landscaping" 
+              src="/painting-scaffold-work-platform.jpg" 
+              alt="Professional Interior & Exterior Painting Services" 
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60 -mt-6"
             />
             <img 

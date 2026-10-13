@@ -101,21 +101,14 @@ export default function Navbar({
           {/* Logo Section */}
           <div 
             onClick={() => navigateTo('home')} 
-            className="flex items-center space-x-2.5 sm:space-x-3 cursor-pointer group"
+            className="flex items-center cursor-pointer group py-0.5"
+            aria-label="Aruba High Maintenance Home"
           >
             <img 
-              src="/logo.svg" 
-              alt="Aruba High Maintenance Logo" 
-              className="h-9 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" 
+              src="/logo.png" 
+              alt="Aruba High Maintenance Contractor" 
+              className="h-11 sm:h-14 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm dark:drop-shadow-[0_2px_14px_rgba(234,179,8,0.22)]" 
             />
-            <div className="flex flex-col">
-              <span className="text-navy-950 dark:text-white font-grotesk font-extrabold text-sm sm:text-lg tracking-wider group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
-                ARUBA HIGH
-              </span>
-              <span className="text-crimson-600 dark:text-gold-500 font-sans text-[8px] sm:text-xs font-extrabold tracking-wider sm:tracking-widest -mt-1 uppercase">
-                Maintenance Contractor
-              </span>
-            </div>
           </div>
 
           {/* Desktop Navigation Links */}
@@ -322,20 +315,16 @@ export default function Navbar({
           <div>
             {/* Header Branding & Close Button */}
             <div className="flex items-center justify-between pb-5 border-b border-slate-200 dark:border-slate-800">
-              <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigateTo('home')}>
+              <div 
+                className="flex items-center cursor-pointer group" 
+                onClick={() => { navigateTo('home'); setMobileMenuOpen(false); }}
+                aria-label="Aruba High Maintenance Home"
+              >
                 <img 
-                  src="/logo.svg" 
-                  alt="Aruba High Maintenance Logo" 
-                  className="h-10 w-auto object-contain filter drop-shadow-md" 
+                  src="/logo.png" 
+                  alt="Aruba High Maintenance Contractor" 
+                  className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-sm dark:drop-shadow-[0_2px_14px_rgba(234,179,8,0.22)]" 
                 />
-                <div className="flex flex-col">
-                  <span className="text-navy-950 dark:text-white font-grotesk font-black text-base tracking-wider">
-                    ARUBA HIGH
-                  </span>
-                  <span className="text-crimson-600 dark:text-gold-500 font-sans text-[9px] font-bold tracking-widest uppercase -mt-1">
-                    Maintenance Contractor
-                  </span>
-                </div>
               </div>
 
               <button

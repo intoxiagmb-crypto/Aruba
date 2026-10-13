@@ -90,9 +90,9 @@ function App() {
         {/* Animated premium logo loader */}
         <div className="relative mb-6">
           <img 
-            src="/logo.svg" 
+            src="/logo.png" 
             alt="Aruba High Maintenance Logo" 
-            className="h-20 sm:h-24 w-auto object-contain animate-pulse-subtle filter drop-shadow-xl" 
+            className="h-20 sm:h-24 w-auto object-contain animate-pulse-subtle filter drop-shadow-md dark:drop-shadow-[0_4px_20px_rgba(234,179,8,0.25)]" 
           />
           <div className="absolute -inset-4 border-2 border-gold-500/40 rounded-3xl animate-spin" style={{ animationDuration: '5s' }} />
         </div>

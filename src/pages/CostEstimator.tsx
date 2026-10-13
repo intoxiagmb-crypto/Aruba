@@ -337,8 +337,8 @@ export default function CostEstimator({ lang, setCurrentPage }: CostEstimatorPro
         <body>
           <div class="header">
             <div>
-              <div class="logo">ARUBA HIGH MAINTENANCE</div>
-              <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Italiestraat 38 unit 5B, Aruba</div>
+              <img src="${window.location.origin}/logo.png" alt="Aruba High Maintenance" style="height: 52px; width: auto; object-fit: contain; margin-bottom: 6px; display: block;" />
+              <div style="font-size: 12px; color: #64748b; font-weight: 600;">General Contractor Services &bull; Italiestraat 38 unit 5B, Aruba</div>
             </div>
             <div class="title">Cost Estimate</div>
           </div>
