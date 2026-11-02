@@ -83,10 +83,12 @@ export default function Projects({ lang }: ProjectsProps) {
       budget: '$28,500',
       duration: '18 Days',
       rating: 5,
-      image: '/landscaping-garden-bed-pebbles.jpg',
+      image: '/landscaping-villa-pool-night.jpg',
       beforeImage: '/landscaping-tropical-plants-stones.jpg',
       description: 'Total design and planting of drought-resistant oleander flowers, ornamental shrubs, white river pebble gravel bedding, and synthetic turf lawn borders with smart drip irrigation.',
       gallery: [
+        '/landscaping-villa-pool-night.jpg',
+        '/landscaping-villa-pool-day.jpg',
         '/landscaping-garden-bed-pebbles.jpg',
         '/landscaping-tropical-plants-stones.jpg',
         '/landscaping-pool-patio-bbq.jpg',
@@ -114,7 +116,7 @@ export default function Projects({ lang }: ProjectsProps) {
     },
     {
       id: 5,
-      title: 'DOW Telecom Cell Tower Repainting',
+      title: 'Cell towers maintenance/ installation',
       category: 'celltower',
       location: 'San Nicolaas, Aruba',
       budget: '$55,000',

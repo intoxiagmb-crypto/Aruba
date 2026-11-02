@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Language, translations } from '../utils/translations';
-import { Calendar, Clock, User, Phone, Mail, FileText, CheckCircle, ChevronRight, ChevronLeft, ShieldCheck, Sparkles } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { Language } from '../utils/translations';
+import { Calendar, Clock, User, Phone, Mail, FileText, ChevronRight, ChevronLeft } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
+import { APPOINTMENT_TIMES, appointmentLinks, earliestAppointmentDate, isValidAppointment } from '../utils/appointments';
 
 interface AppointmentProps {
   lang: Language;
 }
 
 export default function Appointment({ lang }: AppointmentProps) {
-  const t = translations[lang];
   const [step, setStep] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const [minimumDate, setMinimumDate] = useState(() => earliestAppointmentDate());
+  const [scheduleError, setScheduleError] = useState('');
 
   // Form Fields
   const [service, setService] = useState('painting');
@@ -21,7 +22,15 @@ export default function Appointment({ lang }: AppointmentProps) {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [description, setDescription] = useState('');
-  const [fileName, setFileName] = useState('');
+  useEffect(() => {
+    const refreshDate = () => setMinimumDate(earliestAppointmentDate());
+    const interval = window.setInterval(refreshDate, 30_000);
+    window.addEventListener('focus', refreshDate);
+    return () => {
+      window.clearInterval(interval);
+      window.removeEventListener('focus', refreshDate);
+    };
+  }, []);
 
   const servicesList = [
     { id: 'painting', label: 'Painting & Weatherproofing' },
@@ -31,14 +40,27 @@ export default function Appointment({ lang }: AppointmentProps) {
     { id: 'carpentry', label: 'Carpentry & Woodwork' },
     { id: 'construction', label: 'General Construction' },
     { id: 'landscaping', label: 'Landscaping & Poolsurrounds' },
-    { id: 'celltower', label: 'Cell Tower Maintenance' }
+    { id: 'celltower', label: 'Cell towers maintenance/ installation' }
   ];
 
-  const timeslots = [
-    '08:00 AM', '09:30 AM', '11:00 AM', '01:30 PM', '03:00 PM', '04:30 PM'
-  ];
+  const timeslots = APPOINTMENT_TIMES;
+  const selectedService = servicesList.find(item => item.id === service)!.label;
+  const links = appointmentLinks({ service: selectedService, date, time, name, phone, email, address, description });
+  const validSchedule = date >= minimumDate && isValidAppointment(date, time);
+
+  const validateSchedule = () => {
+    setMinimumDate(earliestAppointmentDate());
+    if (!isValidAppointment(date, time)) {
+      setScheduleError('Please choose tomorrow or a later date and a preferred time. Same-day appointments are not available.');
+      setStep(2);
+      return false;
+    }
+    setScheduleError('');
+    return true;
+  };
 
   const handleNextStep = () => {
+    if (step === 2 && !validateSchedule()) return;
     if (step < 4) {
       setStep(prev => prev + 1);
     }
@@ -50,28 +72,16 @@ export default function Appointment({ lang }: AppointmentProps) {
     }
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setFileName(e.target.files[0].name);
-    }
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
+    if (step !== 3 || !validateSchedule()) return;
+    if (![name, phone, email, address, description].every(value => value.trim())) return;
+    window.open(links.whatsapp, '_blank', 'noopener,noreferrer');
+    setStep(4);
+  };
 
-    // Simulate network delay
-    setTimeout(() => {
-      setLoading(false);
-      setStep(4);
-      
-      // Trigger confetti!
-      confetti({
-        particleCount: 150,
-        spread: 80,
-        origin: { y: 0.6 }
-      });
-    }, 1500);
+  const handleSend = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!validateSchedule()) e.preventDefault();
   };
 
   return (
@@ -100,7 +110,7 @@ export default function Appointment({ lang }: AppointmentProps) {
                     : 'bg-slate-100 dark:bg-navy-900 border-slate-200 dark:border-slate-800 text-slate-400'
                 }`}
               >
-                {num === 4 && step === 4 ? '✓' : num}
+                {num}
               </div>
             ))}
           </div>
@@ -109,7 +119,7 @@ export default function Appointment({ lang }: AppointmentProps) {
             <span>Service</span>
             <span>Schedule</span>
             <span>Details</span>
-            <span>Success</span>
+            <span>Send request</span>
           </div>
         </div>
 
@@ -173,16 +183,23 @@ export default function Appointment({ lang }: AppointmentProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                   {/* Date Input */}
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center">
+                    <label htmlFor="appointment-date" className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center">
                       <Calendar size={14} className="mr-1 text-gold-500" /> Select Date
                     </label>
                     <input
+                      id="appointment-date"
                       type="date"
+                      min={minimumDate}
+                      aria-describedby="appointment-date-help"
                       value={date}
-                      onChange={(e) => setDate(e.target.value)}
+                      onChange={(e) => { setDate(e.target.value); setTime(''); setScheduleError(''); }}
                       required
                       className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-500"
                     />
+                    <p id="appointment-date-help" className="text-xs text-slate-500 dark:text-slate-400">
+                      Choose tomorrow or later. No same-day bookings. All dates and times are in Aruba time.
+                    </p>
+                    {scheduleError && <p role="alert" className="text-xs text-red-600 dark:text-red-400">{scheduleError}</p>}
                   </div>
 
                   {/* Time Input */}
@@ -196,7 +213,9 @@ export default function Appointment({ lang }: AppointmentProps) {
                           key={slot}
                           type="button"
                           onClick={() => setTime(slot)}
-                          className={`p-2.5 rounded-lg border text-xs font-bold tracking-wider transition-all ${
+                          disabled={!date || date < minimumDate}
+                          aria-pressed={time === slot}
+                          className={`p-2.5 rounded-lg border text-xs font-bold tracking-wider transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
                             time === slot
                               ? 'bg-gold-500 border-gold-500 text-navy-950 shadow-sm'
                               : 'bg-slate-50 dark:bg-navy-950 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-gold-500/30'
@@ -209,7 +228,7 @@ export default function Appointment({ lang }: AppointmentProps) {
                   </div>
                 </div>
 
-                <div className="pt-8 border-t border-slate-100 dark:border-slate-850 flex justify-between">
+                <div className="pt-8 border-t border-slate-100 dark:border-slate-850 flex flex-col sm:flex-row gap-3 justify-between">
                   <button
                     type="button"
                     onClick={handlePrevStep}
@@ -222,7 +241,7 @@ export default function Appointment({ lang }: AppointmentProps) {
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    disabled={!date || !time}
+                    disabled={!validSchedule}
                     className="bg-navy-900 dark:bg-slate-800 hover:bg-gold-500 hover:text-navy-950 text-gold-500 font-bold px-6 py-3 rounded-lg border border-gold-500/30 hover:border-gold-500 flex items-center space-x-1.5 text-xs uppercase tracking-wider transition-colors disabled:opacity-50"
                   >
                     <span>Next: Project Details</span>
@@ -315,23 +334,11 @@ export default function Appointment({ lang }: AppointmentProps) {
                   />
                 </div>
 
-                {/* File Upload Mock */}
-                <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">Upload Site / Blueprints Photos (Optional)</label>
-                  <div className="border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-4 text-center cursor-pointer hover:border-gold-500 transition-colors relative">
-                    <input
-                      type="file"
-                      onChange={handleFileChange}
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                    />
-                    <span className="text-xs text-slate-500 block font-semibold">
-                      {fileName ? `Selected: ${fileName}` : 'Click or Drag images here to upload (PNG, JPG)'}
-                    </span>
-                    <span className="text-[10px] text-slate-400 mt-1 block">Maximum size 5MB</span>
-                  </div>
-                </div>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  Continue to WhatsApp with all your appointment details, then press Send. You can attach site photos or blueprints there.
+                </p>
 
-                <div className="pt-8 border-t border-slate-100 dark:border-slate-850 flex justify-between">
+                <div className="pt-8 border-t border-slate-100 dark:border-slate-850 flex flex-col sm:flex-row gap-3 justify-between">
                   <button
                     type="button"
                     onClick={handlePrevStep}
@@ -343,70 +350,66 @@ export default function Appointment({ lang }: AppointmentProps) {
                   
                   <button
                     type="submit"
-                    disabled={loading || !name || !phone || !email || !description}
+                    disabled={!name.trim() || !phone.trim() || !email.trim() || !address.trim() || !description.trim()}
                     className="bg-gradient-to-r from-gold-500 to-orange-500 hover:from-gold-600 hover:to-orange-600 text-navy-950 font-bold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-orange-500/10 flex items-center space-x-1.5 text-xs uppercase tracking-wider transition-all disabled:opacity-50"
                   >
-                    {loading ? (
-                      <span className="flex items-center space-x-2">
-                        <span className="w-4 h-4 border-2 border-navy-950 border-t-transparent rounded-full animate-spin" />
-                        <span>Confirming...</span>
-                      </span>
-                    ) : (
-                      <>
-                        <span>Submit Booking Request</span>
-                        <Sparkles size={14} />
-                      </>
-                    )}
+                    <WhatsAppIcon className="w-5 h-5 shrink-0" />
+                    <span>Send via WhatsApp</span>
                   </button>
                 </div>
               </div>
             )}
 
-            {/* STEP 4: SUCCESS CONFIRMATION */}
+            {/* STEP 4: COMPLETE REQUEST IN WHATSAPP */}
             {step === 4 && (
               <div className="text-center space-y-6 py-6 animate-fade-in">
                 <div className="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 rounded-2xl flex items-center justify-center mx-auto shadow-md">
-                  <CheckCircle size={36} />
+                  <WhatsAppIcon className="w-9 h-9" />
                 </div>
                 
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-black text-navy-900 dark:text-white font-grotesk">Booking Confirmed!</h3>
+                  <h3 className="text-2xl font-black text-navy-900 dark:text-white font-grotesk">Complete Your Request in WhatsApp</h3>
                   <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm max-w-md mx-auto">
-                    Masha danki! Your consultation request has been logged. Our dispatcher will call you shortly to confirm the appointment.
+                    Your WhatsApp message includes your service, preferred date and time, name, phone, email, site address, and project description. Press Send in WhatsApp to deliver it to our team.
                   </p>
                 </div>
 
                 {/* Booking summary box */}
                 <div className="bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-slate-800 p-5 rounded-2xl max-w-md mx-auto text-left text-xs sm:text-sm space-y-3">
-                  <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-800">
-                    <span className="text-slate-500 uppercase tracking-widest font-bold text-[10px]">Reference ID</span>
-                    <span className="font-mono font-bold text-gold-500">AHM-{Math.floor(100000 + Math.random() * 900000)}</span>
-                  </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col sm:flex-row gap-2 justify-between">
                     <span className="text-slate-500">Service Required</span>
-                    <span className="font-bold text-navy-900 dark:text-white capitalize">{service}</span>
+                    <span className="font-bold text-navy-900 dark:text-white sm:text-right">{selectedService}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col sm:flex-row gap-2 justify-between">
                     <span className="text-slate-500">Schedule</span>
-                    <span className="font-bold text-navy-900 dark:text-white">{date} at {time}</span>
+                    <span className="font-bold text-navy-900 dark:text-white">{date} at {time} (Aruba)</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">Representative Dispatch</span>
-                    <span className="font-bold text-navy-900 dark:text-white">Coe M. Petronilia / Site Inspector</span>
+                  <div className="flex flex-col sm:flex-row gap-2 justify-between">
+                    <span className="text-slate-500">Your Name</span>
+                    <span className="font-bold text-navy-900 dark:text-white break-words min-w-0">{name}</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-2 justify-between">
+                    <span className="text-slate-500">Site Address</span>
+                    <span className="font-bold text-navy-900 dark:text-white break-words min-w-0">{address}</span>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-100 dark:border-slate-850 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3">
-                  <div className="flex items-center space-x-1.5 text-xs text-slate-500 dark:text-slate-400 bg-gold-500/5 border border-gold-500/10 px-3 py-1.5 rounded-lg">
-                    <ShieldCheck size={14} className="text-gold-500" />
-                    <span>Email Confirmation Sent</span>
+                <div className="space-y-3 pt-6 border-t border-slate-100 dark:border-slate-850">
+                  <div className="flex justify-center">
+                    <a href={links.whatsapp} onClick={handleSend} target="_blank" rel="noopener noreferrer"
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-3 rounded-xl flex items-center justify-center gap-2">
+                      <WhatsAppIcon className="w-5 h-5 shrink-0" /> Open WhatsApp
+                    </a>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => { setStep(1); setFileName(''); }}
-                    className="bg-navy-900 dark:bg-slate-900 hover:bg-gold-500 hover:text-navy-950 text-gold-500 font-bold px-6 py-2.5 rounded-xl border border-gold-500/30 hover:border-gold-500 text-xs uppercase tracking-wider transition-colors"
-                  >
-                    Book Another Service
+                  <p className="text-xs text-slate-500 dark:text-slate-400 break-words">
+                    WhatsApp: +297 730 8583
+                  </p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    If WhatsApp did not open, use the button above. Your appointment is only confirmed when our team replies.
+                  </p>
+                  <button type="button" onClick={() => setStep(3)}
+                    className="text-sm font-bold text-gold-600 dark:text-gold-400 underline px-4 py-2">
+                    Edit Request
                   </button>
                 </div>
               </div>

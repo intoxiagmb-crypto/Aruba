@@ -131,11 +131,11 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
         'New residential homes and commercial builds',
         'Villas extensions, roof additions, and guest houses',
         'Retaining walls, perimeter fencing, and concrete boundary lines',
-        'Permit acquisition support with DOW Aruba',
+        'Permit acquisition support',
         'Structural steel frame erection and brick masonry'
       ],
       benefits: [
-        'DOW-approved licensed engineers',
+        'Licensed engineers',
         'Comprehensive public liability insurance',
         'Weekly digital progress tracking photos'
       ],
@@ -146,7 +146,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
       ],
       pricing: 'Detailed custom quote provided upon reviewing architectural blueprints. Scheduling is typically booked 1-2 months in advance.',
       faqs: [
-        { q: 'Do you help with DOW permit applications?', a: 'Yes. We compile engineering blueprints, zoning clearances, and handle filings directly with the Dienst Openbare Werken (DOW).' },
+        { q: 'Do you help with permit applications?', a: 'Yes. We compile engineering blueprints, zoning clearances, and handle filings directly with the relevant local authorities.' },
         { q: 'Can I track my construction project remotely?', a: 'Absolutely. We send weekly photos and updates which you can view inside our online Customer Tracker.' }
       ]
     },
@@ -241,7 +241,7 @@ export default function ServiceDetail({ serviceId, setSelectedService, setCurren
       ]
     },
     celltower: {
-      title: lang === 'pap' ? 'Mantencion di Telecommunication' : lang === 'nl' ? 'Zendmasten & Telecommunicatie' : 'Cell Tower Maintenance',
+      title: lang === 'pap' ? 'Mantencion di Telecommunication' : lang === 'nl' ? 'Zendmasten & Telecommunicatie' : 'Cell towers maintenance/ installation',
       tagline: 'Certified high-altitude structural maintenance and telecommunication rigging.',
       bgImage: '/cell-tower-repainting.jpg',
       description: 'Telecommunication cell towers in Aruba are highly prone to corrosion due to the salty trade winds. We provide certified high-altitude rigging services including structural inspections, guy-wire testing, bolt replacements, specialized anti-corrosion painting, and microwave antenna alignment. All climbing operations strictly follow OSHA safety regulations.',

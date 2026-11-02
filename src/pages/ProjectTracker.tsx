@@ -99,7 +99,7 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
           title: 'Mixer Truck Staging & Steel Rebar Framework',
           date: 'June 28, 2026',
           status: 'done',
-          notes: 'Constructed reinforced steel grids. Formwork inspection approved according to DOW structural codes.',
+          notes: 'Constructed reinforced steel grids. Formwork inspection approved according to applicable structural codes.',
           image: '/concrete-mixer-chute-crew.jpg'
         },
         {
@@ -142,7 +142,7 @@ export default function ProjectTracker({ lang }: ProjectTrackerProps) {
     },
     'ARUBA-2026-004': {
       code: 'ARUBA-2026-004',
-      name: 'DOW Telecom Cell Tower Repainting & Rigging',
+      name: 'Cell towers maintenance/ installation',
       location: 'San Nicolaas, Aruba',
       manager: 'Coe M. Petronilia / High-Altitude Rigging Lead',
       completion: 70,

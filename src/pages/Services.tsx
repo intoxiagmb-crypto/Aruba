@@ -70,7 +70,7 @@ export default function Services({ lang, setSelectedService, setCurrentPage }: S
     },
     {
       id: 'celltower',
-      title: lang === 'pap' ? 'Mantencion di Telecommunication' : lang === 'nl' ? 'Zendmasten & Telecommunicatie' : 'Cell Tower Maintenance',
+      title: lang === 'pap' ? 'Mantencion di Telecommunication' : lang === 'nl' ? 'Zendmasten & Telecommunicatie' : 'Cell towers maintenance/ installation',
       icon: <HardHat size={28} />,
       shortDesc: 'High altitude mast rigging, safety check audits, rust prevention, painting, and cabling swaps.',
       categories: ['Climbing Riggers', 'Rust Treatment', 'Safety Auditing'],

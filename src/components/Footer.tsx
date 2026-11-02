@@ -1,6 +1,8 @@
 import React from 'react';
 import { translations, Language } from '../utils/translations';
 import { Phone, Mail, MapPin, Clock, ArrowUp, MessageCircle } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
+import { BUSINESS_EMAIL, BUSINESS_WHATSAPP } from '../utils/appointments';
 
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -241,16 +243,27 @@ export default function Footer({ setCurrentPage, setSelectedService, lang }: Foo
         <ArrowUp size={18} className="transform group-hover:-translate-y-0.5 transition-transform" />
       </button>
 
-      {/* Floating WhatsApp Action Button */}
+      {/* Floating contact actions */}
+      <div className="fixed bottom-6 left-6 z-40 flex flex-col gap-3">
       <a
-        href="https://wa.me/2977308583"
+        href={`mailto:${BUSINESS_EMAIL}`}
+        className="bg-navy-900 hover:bg-navy-950 text-gold-500 border border-gold-500/40 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+        title="Email us"
+        aria-label="Email Aruba High Maintenance"
+      >
+        <Mail size={26} aria-hidden="true" />
+      </a>
+      <a
+        href={`https://wa.me/${BUSINESS_WHATSAPP}`}
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-6 left-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 animate-pulse-subtle"
+        className="bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
         title="Chat on WhatsApp"
+        aria-label="Chat with Aruba High Maintenance on WhatsApp"
       >
-        <MessageCircle size={28} fill="currentColor" className="text-white" />
+        <WhatsAppIcon className="w-7 h-7" />
       </a>
+      </div>
     </footer>
   );
 }

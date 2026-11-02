@@ -31,7 +31,7 @@ export default function FAQ({ lang }: FAQProps) {
     },
     {
       q: 'Are your painters, plumbers, and electricians certified?',
-      a: 'Absolutely. Every technician under our employ is licensed and holds active safety and technical credentials. Our electrical engineers are fully certified to inspect systems and sign DOW compliance paperwork.',
+      a: 'Absolutely. Every technician under our employ is licensed and holds active safety and technical credentials. Our electrical engineers are fully certified to inspect systems and sign compliance paperwork.',
       category: 'services'
     },
     {

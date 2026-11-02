@@ -112,7 +112,7 @@ export default function About({ lang, setCurrentPage }: AboutProps) {
             />
             <img 
               src="/cell-tower-repainting.jpg" 
-              alt="DOW Telecom Cell Tower Repainting" 
+              alt="Cell towers maintenance/ installation"
               className="rounded-xl shadow-md object-cover w-full h-48 sm:h-60"
             />
           </div>
