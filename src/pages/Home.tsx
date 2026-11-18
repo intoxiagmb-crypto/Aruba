@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { translations, Language } from '../utils/translations';
-import { ArrowRight, Star, Shield, HardHat, Award, CheckCircle, Calendar, Phone, ArrowUpRight, ChevronRight, AlertCircle, Quote, Clock } from 'lucide-react';
+import { ArrowRight, Shield, HardHat, Award, CheckCircle, Calendar, Phone, ArrowUpRight, ChevronRight, AlertCircle, Clock } from 'lucide-react';
 
 interface HomeProps {
   setCurrentPage: (page: string) => void;
@@ -507,85 +507,7 @@ export default function Home({ setCurrentPage, setSelectedService, lang }: HomeP
         </div>
       </section>
 
-      {/* 6. TESTIMONIALS */}
-      <section className="py-24 bg-slate-50 dark:bg-navy-900 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-xs uppercase tracking-widest text-gold-500 font-bold mb-3">
-              {lang === 'pap' ? 'Testimonio' : lang === 'nl' ? 'Klantbeoordelingen' : 'Client Success Stories'}
-            </h2>
-            <h3 className="text-3xl sm:text-4xl font-extrabold text-navy-900 dark:text-white tracking-tight">
-              {lang === 'pap' ? 'Loke Nos Clientenan ta Bisa' : lang === 'nl' ? 'Wat Onze Klanten Vertellen' : 'Highly Recommended Across Aruba'}
-            </h3>
-            <div className="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Eward Richardson',
-                role: 'Palm Beach Villa Owner',
-                rating: 5,
-                text: lang === 'pap'
-                  ? "Aruba High Maintenance a haci e pintura exterior y remodelacion di pool di nos villa. E team tawata sumamente profesional, a respeta e schedule y e resultado ta super luhoso!"
-                  : lang === 'nl'
-                  ? "Aruba High Maintenance deed het buitenschilderwerk en zwembadonderhoud van onze villa. Het team was uiterst professioneel, hield zich aan het schema en het resultaat is prachtig!"
-                  : "Aruba High Maintenance handled the exterior painting and pool area remodeling for our villa. The crew was extremely professional, kept the site clean, and delivered luxury finishings."
-              },
-              {
-                name: 'Mariana Tromp',
-                role: 'Commercial Facility Manager, Oranjestad',
-                rating: 5,
-                text: lang === 'pap'
-                  ? "Nos tawatin un leak grandi den un edifisio comercial. Loodgieters di Aruba High a uza detectores acustico, a haya e lek den 1 ora y a drecha e mesun dia sin kibra vloer."
-                  : lang === 'nl'
-                  ? "We hadden een flinke lekkage in ons bedrijfspand. Hun loodgieters vonden het lek binnen een uur met akoestische apparatuur en repareerden het direct. Top service!"
-                  : "We had a major water leak in our commercial offices. Their plumbing specialists used acoustic leak detection, pinpointed the issue within an hour, and fixed it the same afternoon."
-              },
-              {
-                name: 'Devin de Veer',
-                role: 'Property Manager, Eagle Beach Condo Association',
-                rating: 5,
-                text: lang === 'pap'
-                  ? "Nos ta uza Aruba High pa mantencion mensual y reparacion di emergencia (electricidad y pintura). Nan portal online pa track progreso y download invoices ta haci nos bida hopi facil."
-                  : lang === 'nl'
-                  ? "We maken gebruik van hun onderhoudsabonnement voor onze appartementen. Het project tracker portaal en de online facturatie besparen ons ontzettend veel tijd."
-                  : "We rely on them for monthly maintenance contracts. The ability to track active requests via their online tracker and download structured invoices makes property management stress-free."
-              }
-            ].map((item, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center space-x-1 mb-4 text-gold-500">
-                    {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} size={16} fill="currentColor" />
-                    ))}
-                  </div>
-                  <Quote className="text-gold-500/20 absolute right-6 top-6" size={40} />
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed italic relative z-10 mb-6">
-                    "{item.text}"
-                  </p>
-                </div>
-                <div className="border-t border-slate-100 dark:border-slate-800/80 pt-4 flex items-center justify-between">
-                  <div>
-                    <h5 className="font-bold text-navy-900 dark:text-white text-sm">{item.name}</h5>
-                    <p className="text-[11px] text-slate-400 font-semibold mt-0.5">{item.role}</p>
-                  </div>
-                  <span className="text-gold-500 bg-gold-500/10 px-2.5 py-1 rounded text-[10px] font-black uppercase tracking-wider">
-                    {lang === 'pap' ? 'Verifica' : lang === 'nl' ? 'Geverifieerd' : 'Verified'}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 7. CONTACT & MAP WIDGET */}
+      {/* 6. CONTACT & MAP WIDGET */}
       <section className="py-24 bg-white dark:bg-navy-950 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
